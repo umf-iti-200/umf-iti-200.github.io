@@ -35,7 +35,7 @@ export default function Posts({ post }) {
                     <hr />
                 </div>
                 <div className="row">
-                    <div className="body col-12 col-md-9 col-lg-9 col-xxl-10" dangerouslySetInnerHTML={{ __html: post.content }}>
+                    <div className="body col-12 col-md-9 col-lg-9 col-xxl-10 mb-3" dangerouslySetInnerHTML={{ __html: post.content }}>
                     </div>
                     <div className="sidepanel col-12 col-md-3 col-lg-3 col-xxl-2">
                         <Card className="mb-3">
