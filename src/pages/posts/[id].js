@@ -54,10 +54,6 @@ export default function Posts({ post }) {
                 </div>
             </div>
 
-            <hr />
-
-            <Link href="/" className="text-decoration-none">← Back to Home</Link>
-
         </Layout>
     );
 }

@@ -39,6 +39,9 @@ export default function Layout({ children, menu, title = "", hasGoBackButton = f
                             {children}
                         </Col>
                     </Row>
+                    <footer className="py-3 my-4 border-top pt-3 mt-3 small">
+                        <p className="text-center text-body-secondary">ITI 200 Introduction to Cloud Computing</p>
+                    </footer>
                 </Container>
             </main>
         </>
