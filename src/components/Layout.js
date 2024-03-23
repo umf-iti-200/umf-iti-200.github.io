@@ -26,6 +26,7 @@ export default function Layout({ children, menu, title = "", hasGoBackButton = f
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
+                                <Nav.Link href="/">Home</Nav.Link>
                                 <Nav.Link href="/posts">Posts</Nav.Link>
                             </Nav>
                             <Nav>
@@ -37,16 +38,12 @@ export default function Layout({ children, menu, title = "", hasGoBackButton = f
             </header >
             <main>
                 <Container>
-                    <Row>
-                        <Col sm="12">
-                            {children}
-                        </Col>
-                    </Row>
-                    <footer className="border-top pt-3 mt-3 small">
-                        <p className="text-center text-body-secondary">ITI 200 Introduction to Cloud Computing</p>
-                    </footer>
+                    {children}
                 </Container>
             </main>
+            <footer className="border-top pt-3 mt-3 small">
+                <p className="text-center text-body-secondary">ITI 200 Introduction to Cloud Computing</p>
+            </footer>
         </>
     );
 }
