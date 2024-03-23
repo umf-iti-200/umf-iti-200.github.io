@@ -5,6 +5,7 @@ import Head from "next/head";
 
 import Package from "../../package.json";
 import ColorThemeNavItem from "./ColorThemeNavItem";
+import Link from "next/link";
 
 export default function Layout({ children, menu, title = "", hasGoBackButton = false }) {
 
@@ -26,8 +27,8 @@ export default function Layout({ children, menu, title = "", hasGoBackButton = f
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link href="/">Home</Nav.Link>
-                                <Nav.Link href="/posts">Posts</Nav.Link>
+                                <Link class="nav-link" href="/">Home</Link>
+                                <Link class="nav-link" href="/posts">Posts</Link>
                             </Nav>
                             <Nav>
                                 <ColorThemeNavItem />
