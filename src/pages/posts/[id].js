@@ -9,7 +9,7 @@ export default function Posts({ post }) {
 
     const tagsAsHTML = post.tags.map((tag, i) =>
         <a key={i} href="https://www.google.com">
-            <span className="badge bg-primary-subtle text-primary-emphasis rounded-pill me-2">{tag}</span>
+            <span className="badge bg-primary-subtle text-primary-emphasis border border-primary-subtle rounded-pill me-2">{tag}</span>
         </a>
     );
 
@@ -19,12 +19,19 @@ export default function Posts({ post }) {
             <nav>
                 <ol className="breadcrumb breadcrumb-chevron bg-body-tertiary rounded-3 p-3">
                     <li className="breadcrumb-item">
-                        <a href="/">
+                        <Link href="/">
                             <i className="bi bi-house-door-fill"></i>
                             <span className="visually-hidden">Home</span>
-                        </a>
+                        </Link>
                     </li>
-                    <li className="breadcrumb-item active">{post.title}</li>
+                    <li className="breadcrumb-item">
+                        <Link href="/posts" className="text-decoration-none">
+                            Posts
+                        </Link>
+                    </li>
+                    <li className="breadcrumb-item active">
+                        {post.title}
+                    </li>
                 </ol>
             </nav>
 

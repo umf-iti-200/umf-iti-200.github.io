@@ -2,7 +2,6 @@ import { Row, Col, Container } from "react-bootstrap";
 import { Nav, Navbar } from "react-bootstrap";
 
 import Head from "next/head";
-import Link from "next/link";
 
 import Package from "../../package.json";
 import ColorThemeNavItem from "./ColorThemeNavItem";
@@ -20,11 +19,15 @@ export default function Layout({ children, menu, title = "", hasGoBackButton = f
             <header>
                 <Navbar expand="md" bg="dark" fixed="top" data-bs-theme="dark">
                     <Container>
-                        <Navbar.Brand href="/" className="d-none  d-sm-block">ITI 200 Introduction to Cloud Computing</Navbar.Brand>
-                        <Navbar.Brand href="/" className="d-block d-sm-none">ITI 200</Navbar.Brand>
+                        <Navbar.Brand href="/">
+                            <span className="d-none  d-sm-block">ITI 200 Introduction to Cloud Computing</span>
+                            <span className="d-block d-sm-none">ITI 200</span>
+                        </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="me-auto"></Nav>
+                            <Nav className="me-auto">
+                                <Nav.Link href="/posts">Posts</Nav.Link>
+                            </Nav>
                             <Nav>
                                 <ColorThemeNavItem />
                             </Nav>
