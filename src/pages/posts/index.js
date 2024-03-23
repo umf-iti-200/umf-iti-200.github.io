@@ -17,7 +17,7 @@ export default function IndexPage({ posts }) {
     );
 
     return (
-        <Layout menu="Home">
+        <Layout menu="Posts">
 
             <nav>
                 <ol className="breadcrumb breadcrumb-chevron bg-body-tertiary rounded-3 p-3">
