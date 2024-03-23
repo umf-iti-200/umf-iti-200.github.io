@@ -5,6 +5,7 @@ category: Amazon AWS
 tags:
   - aws
   - amazon
+  - s3
 ---
 
 # Before You Begin
