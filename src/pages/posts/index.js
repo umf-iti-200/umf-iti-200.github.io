@@ -28,9 +28,7 @@ export default function IndexPage({ posts }) {
                         </Link>
                     </li>
                     <li className="breadcrumb-item active">
-                        <Link href="/posts" className="text-decoration-none">
-                            Posts
-                        </Link>
+                        Posts
                     </li>
                 </ol>
             </nav>
