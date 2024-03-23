@@ -20,10 +20,10 @@ export default function Layout({ children, menu, title = "", hasGoBackButton = f
             <header>
                 <Navbar expand="md" bg="dark" fixed="top" data-bs-theme="dark">
                     <Container>
-                        <Navbar.Brand href="/">
+                        <Link class="navbar-brand" href="/">
                             <span className="d-none  d-sm-block">ITI 200 Introduction to Cloud Computing</span>
                             <span className="d-block d-sm-none">ITI 200</span>
-                        </Navbar.Brand>
+                        </Link>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
