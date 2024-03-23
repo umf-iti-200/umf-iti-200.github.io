@@ -31,8 +31,8 @@ In <em>General Configuration</em>, Enter a bucket name of your choice, and selec
 
 <img src="https://user-images.githubusercontent.com/114015/223167435-6ff1f647-cc3b-485c-a630-003950875de9.png">
 
-<div class="alert alert-warning">
-    <i class="bi bi-exclamation-circle me-2"></i>The bucket names must be <strong>unique</strong> across all AWS accounts
+<div className="alert alert-warning">
+    <i className="bi bi-exclamation-circle me-2"></i>The bucket names must be <strong>unique</strong> across all AWS accounts
 </div>
 
 In <em>Block Public Access settings for this bucket</em>, Uncheck "Block all public access" and then check "I acknowledge that the current settings might result in this bucket and the objects within becoming public".
@@ -125,7 +125,7 @@ In <em>Bucket Policy</em>, click on <em>Edit</em>.
 
 To grant public read access to your website, copy the following bucket policy, and paste it in the <em>Bucket policy editor</em>.
 
-<pre><code class="json language-json">
+<pre><code className="json language-json">
   {
       "Version": "2012-10-17",
       "Statement": [
@@ -200,6 +200,6 @@ Type "permanently delete" and confirm by clicking on <em>Empty</em>. If successf
 
 Finally, select again the bucket row and click on <em>Delete</em>. Type the name of the bucket, and click Confirm.
 
-<div class="alert alert-danger">
-    <i class="bi bi-exclamation-triangle me-2"></i>Don't forget to delete all buckets after this lesson.
+<div className="alert alert-danger">
+    <i className="bi bi-exclamation-triangle me-2"></i>Don't forget to delete all buckets after this lesson.
 </div>

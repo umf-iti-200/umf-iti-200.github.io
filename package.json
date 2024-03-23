@@ -1,14 +1,10 @@
 {
-    "name": "nextjs-blog",
-    "description": "nextjs-blog",
+    "name": "umf-iti-200.github.io",
+    "description": "Supporting Blog for ITI 200",
     "version": "0.0.1",
-    "author": "First and Last Name",
+    "author": "Thiago Ferreira",
     "license": "MIT",
-    "homepage": "http://anysite.org",
-    "repository": {
-        "type": "git",
-        "url": "http://anysite.org"
-    },
+    "homepage": "umf-iti-200.github.io",
     "scripts": {
         "dev": "npm run lint-fix && next dev",
         "lint": "npx eslint .",
@@ -17,12 +13,12 @@
         "update-dependencies": "ncu -u"
     },
     "keywords": [
-        "nextjs",
-        "blog"
+        "umf",
+        "iti-200"
     ],
     "devDependencies": {
-        "@babel/eslint-parser": "7.23.10",
-        "@next/eslint-plugin-next": "14.1.0",
+        "@babel/eslint-parser": "7.24.1",
+        "@next/eslint-plugin-next": "14.1.4",
         "eslint": "8.57.0"
     },
     "dependencies": {
@@ -32,11 +28,11 @@
         "glob": "^10.3.10",
         "gray-matter": "^4.0.3",
         "js-yaml": "4.1.0",
-        "next": "14.1.0",
+        "next": "14.1.4",
         "react": "18.2.0",
-        "react-bootstrap": "2.10.1",
+        "react-bootstrap": "2.10.2",
         "react-dom": "18.2.0",
-        "sass": "1.71.1",
+        "sass": "1.72.0",
         "showdown": "^2.1.0"
     }
 }

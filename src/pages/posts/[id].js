@@ -7,9 +7,9 @@ import Link from "next/link";
 
 export default function Posts({ post }) {
 
-    const tagsAsHTML = post.tags.map(tag =>
-        <a href="https://www.google.com">
-            <span class="badge text-bg-secondary me-2">{tag}</span>
+    const tagsAsHTML = post.tags.map((tag, i) =>
+        <a key={i} href="https://www.google.com">
+            <span className="badge text-bg-primary me-2">{tag}</span>
         </a>
     );
 
