@@ -20,7 +20,7 @@ export default function IndexPage({ posts }) {
         <Layout menu="Home">
 
             <nav>
-                <ol className="breadcrumb bg-body-tertiary rounded py-2 ps-3">
+                <ol className="breadcrumb breadcrumb-chevron bg-body-tertiary rounded-3 p-3">
                     <li className="breadcrumb-item active">Home</li>
                 </ol>
             </nav>

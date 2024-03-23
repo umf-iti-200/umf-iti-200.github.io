@@ -17,9 +17,14 @@ export default function Posts({ post }) {
         <Layout title={post.title}>
 
             <nav>
-                <ol className="breadcrumb bg-body-tertiary rounded py-2 ps-3">
-                    <li className="breadcrumb-item"><a href="/">Home</a></li>
-                    <li className="breadcrumb-item active">What is Workspace?</li>
+                <ol className="breadcrumb breadcrumb-chevron bg-body-tertiary rounded-3 p-3">
+                    <li className="breadcrumb-item">
+                        <a href="/">
+                            <i className="bi bi-house-door-fill"></i>
+                            <span className="visually-hidden">Home</span>
+                        </a>
+                    </li>
+                    <li className="breadcrumb-item active">{post.title}</li>
                 </ol>
             </nav>
 
@@ -49,7 +54,7 @@ export default function Posts({ post }) {
                 </div>
             </div>
 
-            <hr/>
+            <hr />
 
             <Link href="/" className="text-decoration-none">← Back to Home</Link>
 
