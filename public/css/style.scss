@@ -1,0 +1,52 @@
+html {
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+body {
+    margin-top: 80px;
+    padding-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.post {
+
+    margin-top: 14px;
+
+    .header {
+
+        h1 {
+            font-size: 44px !important;
+            font-weight: bold;
+        }
+    }
+
+    .body {
+        h1 {
+            font-size: 25px !important;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 18px !important;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        p {
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        img {
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            width: 600px;
+        }
+    }
+}

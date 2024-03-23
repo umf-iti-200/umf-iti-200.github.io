@@ -1,0 +1,42 @@
+{
+    "name": "nextjs-blog",
+    "description": "nextjs-blog",
+    "version": "0.0.1",
+    "author": "First and Last Name",
+    "license": "MIT",
+    "homepage": "http://anysite.org",
+    "repository": {
+        "type": "git",
+        "url": "http://anysite.org"
+    },
+    "scripts": {
+        "dev": "npm run lint-fix && next dev",
+        "lint": "npx eslint .",
+        "build": "next build",
+        "lint-fix": "npx eslint . --fix",
+        "update-dependencies": "ncu -u"
+    },
+    "keywords": [
+        "nextjs",
+        "blog"
+    ],
+    "devDependencies": {
+        "@babel/eslint-parser": "7.23.10",
+        "@next/eslint-plugin-next": "14.1.0",
+        "eslint": "8.57.0"
+    },
+    "dependencies": {
+        "bootstrap": "5.3.3",
+        "bootstrap-icons": "1.11.3",
+        "dayjs": "^1.11.10",
+        "glob": "^10.3.10",
+        "gray-matter": "^4.0.3",
+        "js-yaml": "4.1.0",
+        "next": "14.1.0",
+        "react": "18.2.0",
+        "react-bootstrap": "2.10.1",
+        "react-dom": "18.2.0",
+        "sass": "1.71.1",
+        "showdown": "^2.1.0"
+    }
+}
