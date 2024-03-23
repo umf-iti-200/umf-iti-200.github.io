@@ -1,7 +1,7 @@
 ---
 title: What is Workspace?
 author: Thiago Ferreira
-category: Miscellaneous
+category: Other
 tags:
   - workspace
   - development
