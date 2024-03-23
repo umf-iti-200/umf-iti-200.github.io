@@ -8,7 +8,6 @@ export default function Document() {
         <Html lang="en" data-bs-theme="light">
             <Head>
                 <meta charSet="utf-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <meta name="author" content={Package.author} />
                 <meta name="description" content={Package.description} />
                 <meta name="keywords" content={Package.keywords} />
