@@ -80,7 +80,7 @@ If you click on it, you can see that your instance is now running.
 
 If you are using Linux or Mac, you need to change the permissions on your key pair file by typing the following command:
 
-<pre><code class="shell language-shell">
+<pre><code className="shell language-shell">
     chmod 400 &lt;key_pair_file&gt;.pem
 </code></pre>
 
@@ -90,7 +90,7 @@ Don't forget to change <code>&lt;key_pair_file&gt;.pem</code>. If you don’t ch
 
 Open the Terminal/Console, navigate to the folder which has your .pem file and then type:
 
-<pre><code class="shell language-shell">
+<pre><code className="shell language-shell">
     ssh -i &lt;key_pair_file&gt;.pem ec2-user@&lt;public_ip_from_dashboard&gt;
 </code></pre>
 
@@ -102,7 +102,7 @@ Look for "Public IPv4 address". This is the IP you will need to access your inst
 
 <img src="https://user-images.githubusercontent.com/114015/224564855-2837c819-4fa1-4cad-82ad-99e996d09cd0.png">
 
-<div class="alert alert-warning" role="alert">
+<div className="alert alert-warning" role="alert">
     Use this IP <strong>only</strong> for SSH.
 </div>
 
@@ -112,7 +112,7 @@ Now it is time to access your instance. On the terminal, type again the aforemen
 
 Congratulations! Now you are accessing the instance you have just created! At this point, your terminal is now interacting directly with your EC2 instance (aka your "virtual computer") - <strong>rather than your physical machine</strong>.
 
-<div class="alert alert-warning" role="alert">
+<div className="alert alert-warning" role="alert">
     The next commands will be executed into your instance, so keep the terminal open.
 </div>
 
@@ -120,13 +120,13 @@ Congratulations! Now you are accessing the instance you have just created! At th
 
 Because you have just created your instance, it is a good practice to upgrade all packages to the newest versions. Thus, type in the terminal to elevate your privileges:
 
-<pre><code class="shell language-shell">
+<pre><code className="shell language-shell">
     sudo su
 </code></pre>
 
 and then type:
 
-<pre><code class="shell language-shell">
+<pre><code className="shell language-shell">
     yum update -y
 </code></pre>
 
@@ -134,21 +134,21 @@ Note: if you are familiar with using <strong>homebrew</strong> on your Mac, you 
 
 ## Install Node.js
 
-Follow <a href="https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html" class="external" target="_blank" rel="noreferrer noopener"><span>this link</span></a> for more information. In summary, type the following commands in the terminal:
+Follow <a href="https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html" className="external" target="_blank" rel="noreferrer noopener"><span>this link</span></a> for more information. In summary, type the following commands in the terminal:
 
-<pre><code class="shell language-shell">
+<pre><code className="shell language-shell">
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 </code></pre>
 
 This will download the installer. Then type the following:
 
-<pre><code class="shell language-shell">
+<pre><code className="shell language-shell">
     . ~/.nvm/nvm.sh
 </code></pre>
 
 To execute the installer. Finally:
 
-<pre><code class="shell language-shell">
+<pre><code className="shell language-shell">
     nvm install 16
 </code></pre>
 
@@ -156,11 +156,11 @@ To install Node.js 16x. Amazon Linux 2 (the free-tier Operating System you selec
 
 ## Your First Node.js application on EC2
 
-Now it is time to run your first application on EC2 by using the content from GitHub. If you don't have an account yet, please <a href="https://github.com/signup" class="external" target="_blank" rel="noreferrer noopener"><span>create one</span></a>.
+Now it is time to run your first application on EC2 by using the content from GitHub. If you don't have an account yet, please <a href="https://github.com/signup" className="external" target="_blank" rel="noreferrer noopener"><span>create one</span></a>.
 
 Because your instance does not have Git installed, you need to install it:
 
-<pre><code class="shell language-shell">
+<pre><code className="shell language-shell">
     yum install git
 </code></pre>
 
@@ -172,7 +172,7 @@ Confirming by typing "y" in the following prompt:
 
 Now type the following command to clone the source on it:
 
-<pre><code class="shell language-shell">
+<pre><code className="shell language-shell">
     git clone https://github.com/umf-iti-200/amazon-ec2.git
 </code></pre>
 
@@ -182,13 +182,13 @@ If everything went well, you are supposed to see the folder downloaded on your i
 
 Open the folder by typing:
 
-<pre><code class="shell language-shell">
+<pre><code className="shell language-shell">
     cd amazon-ec2
 </code></pre>
 
 Now you can install all dependencies
 
-<pre><code class="shell language-shell">
+<pre><code className="shell language-shell">
     npm install
 </code></pre>
 
@@ -250,6 +250,6 @@ Navigate to your EC2 dashboard (where you can see the list of all your instances
 
 <img src="https://user-images.githubusercontent.com/114015/224570572-f7c904b8-f8d9-437d-9d09-a0c27bdb7b1b.png">
 
-<div class="alert alert-danger" role="alert">
-    <i class="bi bi-exclamation-triangle me-2"></i>Don't forget to stop all instances after this lesson.
+<div className="alert alert-danger" role="alert">
+    <i className="bi bi-exclamation-triangle me-2"></i>Don't forget to stop all instances after this lesson.
 </div>
