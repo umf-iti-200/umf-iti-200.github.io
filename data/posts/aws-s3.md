@@ -10,11 +10,11 @@ tags:
 
 # Before You Begin
 
-On your <a href="../misc/what-is-workspace.html">Workspace</a>, download or clone the following repository:
+On your <a href="/posts/what-is-workspace">Workspace</a>, download or clone the following repository:
 
  - <a href="https://github.com/umf-iti-200/amazon-s3">https://github.com/umf-iti-200/amazon-s3</a>
 
-In addition to this, if you did not create yet an AWS account, please follow <a href="../amazon-aws/create-a-new-aws-account.html">this tutorial</a>. If you already have an account, just sign in to Console.
+In addition to this, if you did not create yet an AWS account, please follow <a href="/posts/create-a-new-aws-account">this tutorial</a>. If you already have an account, just sign in to Console.
 
 # Create an S3 Bucket
 
@@ -201,6 +201,6 @@ Type "permanently delete" and confirm by clicking on <em>Empty</em>. If successf
 
 Finally, select again the bucket row and click on <em>Delete</em>. Type the name of the bucket, and click Confirm.
 
-<div className="alert alert-danger">
-    <i className="bi bi-exclamation-triangle me-2"></i>Don't forget to delete all buckets after this lesson.
+<div class="alert alert-danger">
+    <i class="bi bi-exclamation-triangle me-2"></i>Don't forget to delete all buckets after this lesson.
 </div>
