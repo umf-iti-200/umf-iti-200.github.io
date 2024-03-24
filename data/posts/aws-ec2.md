@@ -113,7 +113,7 @@ Now it is time to access your instance. On the terminal, type again the aforemen
 Congratulations! Now you are accessing the instance you have just created! At this point, your terminal is now interacting directly with your EC2 instance (aka your "virtual computer") - <strong>rather than your physical machine</strong>.
 
 <div className="alert alert-warning" role="alert">
-    The next commands will be executed into your instance, so keep the terminal open.
+    The next commands will be executed in your instance, so keep the terminal open.
 </div>
 
 # Update All Packages
