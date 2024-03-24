@@ -187,6 +187,10 @@ http://<YOUR_URL>/welcome.html
 
 Of course, <code>welcome.html</code> does not exist on your bucket. This is why AWS is displaying the error page.
 
+# Princing
+
+If you would like to know more about pricing, please access [https://aws.amazon.com/s3/pricing](https://aws.amazon.com/s3/pricing) for details.
+
 # Clean Up
 
 Navigate to your S3 dashboard (where you can see the list of all of your buckets). Click the bucket symbol next to your bucket name. Then click Empty.
