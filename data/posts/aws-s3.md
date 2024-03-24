@@ -24,16 +24,16 @@ On your Console Home, look for <code>Services</code> on the top navbar and then 
 
 Amazon S3 is an <strong>object storage service</strong> that offers industry-leading scalability, data availability, security, and performance. You can store any kind of "object" on it, e.g., videos, photos, .pdf, etc.
 
-AWS organizes the objects into "buckets". It means that you can have, for instance, a bucket only for images, another bucket only for videos, and so. It will always depend on your or the company's needs. So, Click <em>Create Bucket</em> to create your first bucket.
+AWS organizes the objects into "buckets". It means that you can have, for instance, a bucket only for images, another bucket only for videos, and so on. It will always depend on your or the company's needs. So, Click <em>Create Bucket</em> to create your first bucket.
 
 <img src="https://user-images.githubusercontent.com/114015/223166095-cd388567-ea55-41c3-a8d9-15ce784ba722.png">
 
-In <em>General Configuration</em>, Enter a bucket name of your choice, and select the region closest to your location.
+In <em>General Configuration</em>, enter a bucket name of your choice, and select the region closest to your location.
 
 <img src="https://user-images.githubusercontent.com/114015/223167435-6ff1f647-cc3b-485c-a630-003950875de9.png">
 
-<div className="alert alert-warning">
-    <i className="bi bi-exclamation-circle me-2"></i>The bucket names must be <strong>unique</strong> across all AWS accounts
+<div class="alert alert-warning">
+    <i class="bi bi-exclamation-circle me-2"></i>The bucket names must be <strong>unique</strong> across all AWS accounts
 </div>
 
 In <em>Block Public Access settings for this bucket</em>, Uncheck "Block all public access" and then check "I acknowledge that the current settings might result in this bucket and the objects within becoming public".
@@ -44,7 +44,7 @@ Sometimes you would like to create a bucket to save your personal files as a bac
 
 <img src="https://user-images.githubusercontent.com/114015/223168266-60177709-6571-4499-89ad-3cabac1da9d0.png">
 
-Congratulations, you have created your first bucket as you can see in the figure below.
+Congratulations! You have created your first bucket at AWS S3 as you can see in the figure below.
 
 <img src="https://user-images.githubusercontent.com/114015/223182689-fff01800-569f-4e91-a6e5-7eb8a69f4363.png">
 
@@ -58,7 +58,7 @@ In the S3's dashboard, click the name of the bucket you just created.
 
 As you can see from the figure, because we just created the bucket, it has no objects (or files). Since we want to deploy a static website, we are going to use this bucket to store all files. However, before adding all files, let's tell S3 that this bucket will be used to host a static website. Click the Properties tab:
 
-<img width="250" src="https://user-images.githubusercontent.com/114015/223186723-1485b49e-e7d7-423c-9f95-e0df8ad9fac8.png">
+<img src="https://user-images.githubusercontent.com/114015/223186723-1485b49e-e7d7-423c-9f95-e0df8ad9fac8.png" style="width: 250px;">
 
 In this tab, scroll all the way down until you find <em>Static website hosting</em> section. As you can see, it is set as <code>Disabled</code> as default. Click on <em>Edit</em> button.
 
@@ -82,21 +82,21 @@ Since you have not uploaded any file yet, if you access the URL nothing will sho
 
 # Upload files to the S3 Bucket
 
-Now it is time to upload all files from the project you have just cloned. Go back to the <em>Objects</em> tab and then click on <em>Upload</em>.
+Now it is time to upload all files from the project you have just downloaded/cloned. Go back to the <em>Objects</em> tab and then click on <em>Upload</em>.
 
-<img width="250" src="https://user-images.githubusercontent.com/114015/223200768-9f7660ee-4621-45f0-833e-e348e606feef.png">
+<img src="https://user-images.githubusercontent.com/114015/223200768-9f7660ee-4621-45f0-833e-e348e606feef.png" style="width: 250px;">
 
-Click on <em>Add Files</em> and select all files you have cloned, except the folder called <code>images</code>. You will upload it later in this lesson.
+Click on <em>Add Files</em> and select all files you have cloned, **except** the folder called <code>images</code>. You will upload it later in this lesson.
 
 <img src="https://user-images.githubusercontent.com/114015/223201311-050ef529-39a1-483e-8625-a98f48a5ddc4.png">
 
-Scroll all the way down and then click on <em>Upload</em>. You will see an Upload Status website. if everything goes well, just click on <em>Done</em>.
+Scroll all the way down and then click on <em>Upload</em>. You will see an Upload Status website. if everything goes well, just click on <em>Close</em>.
 
-<img width="300" src="https://user-images.githubusercontent.com/114015/223201578-9ec1b8a5-96a3-40e2-aa67-18bdfadd2eac.png">
+<img src="https://user-images.githubusercontent.com/114015/223201578-9ec1b8a5-96a3-40e2-aa67-18bdfadd2eac.png" style="width: 300px;">
 
 The page will move you back to your bucket and then you will see the files listed.
 
-<img width="250" src="https://user-images.githubusercontent.com/114015/223201919-12d28cbd-b6eb-42e9-b062-ad349bb18245.png">
+<img src="https://user-images.githubusercontent.com/114015/223201919-12d28cbd-b6eb-42e9-b062-ad349bb18245.png" style="width: 250px;">
 
 # Visit Your Website
 
@@ -104,25 +104,21 @@ Since you have uploaded all the files, it is time to access the URL provided ear
 
 <img src="https://user-images.githubusercontent.com/114015/223207259-ba0b57a7-35b4-4edd-a787-776c58748060.png">
 
-In your case, it could be a totally different URL.
-
-When you access the URL, you will see <code>403 Forbidden</code>.
+In your case, depending on the bucket name, it could be a different URL. When you access the URL, you will see <code>403 Forbidden</code>.
 
 <img src="https://user-images.githubusercontent.com/114015/223207615-66c66eb5-5ee0-4691-acf4-5aed8dae62c4.png">
 
-Even though you had public access when you created the bucket, you still need to set the permissions for its objects (in your case, the files you have just created and other files from your website).
-
-You can either set permission for each individual file, or for the entire bucket. We are going to set permission for the entire bucket. S3 calls the permission as "Bucket policies".
+Even though you had public access when you created the bucket, you still need to set the permissions for its objects (in your case, the files you have just created and other files from your website). You can either set permission for each file or the entire bucket. We are going to set permission for the entire bucket. S3 calls the permission as "Bucket policies".
 
 # Add a Bucket Policy
 
-To make objects in your bucket publicly readable (when the user accesses your website, they will "read" the files you have added), you must write a bucket policy that grants everyone <code>s3:GetObject</code> permission. When you grant public read access, anyone on the internet can access your bucket. Thurs, on your bucket, select the <em>Permissions</em> tab.
+To make objects in your bucket publicly readable (when the user accesses your website, they will "read" the files you have added), you must write a bucket policy that grants everyone <code>s3:GetObject</code> permission. When you grant public read access, anyone on the internet can access your bucket. On your bucket, select the <em>Permissions</em> tab.
 
-<img src="https://user-images.githubusercontent.com/114015/223209381-af2b2c1f-474a-4f43-86ef-9ed073fdbda1.png">
+<img src="https://user-images.githubusercontent.com/114015/223209381-af2b2c1f-474a-4f43-86ef-9ed073fdbda1.png" style="width: 300px;" >
 
 In <em>Bucket Policy</em>, click on <em>Edit</em>.
 
-<img src="https://user-images.githubusercontent.com/114015/223208885-492c7976-8b5b-4c3d-a6d8-bacf33ae379b.png">
+<img src="https://user-images.githubusercontent.com/114015/223208885-492c7976-8b5b-4c3d-a6d8-bacf33ae379b.png" >
 
 To grant public read access to your website, copy the following bucket policy, and paste it in the <em>Bucket policy editor</em>.
 
