@@ -27,8 +27,8 @@ export default function Layout({ children, menu, title = "", hasGoBackButton = f
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
-                                <Link class="nav-link" href="/">Home</Link>
-                                <Link class="nav-link" href="/posts">Posts</Link>
+                                <Link className="nav-link" href="/">Home</Link>
+                                <Link className="nav-link" href="/posts">Posts</Link>
                             </Nav>
                             <Nav>
                                 <ColorThemeNavItem />

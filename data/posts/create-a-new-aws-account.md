@@ -51,7 +51,7 @@ Add all information related to billing. As AWS states, you can't proceed with th
 
 <img src="https://user-images.githubusercontent.com/114015/222937420-9a60f69c-dba6-4c0e-8c01-98286a901c9b.png" >
 
-<div class="alert alert-primary">
+<div className="alert alert-primary">
     AWS <strong>will not charge</strong> you for usage below AWS Free Tier limits. They may temporarily hold up to $1 (or an equivalent amount in local currency) as a pending transaction for 3-5 days to verify your identity.
 </div>
 
