@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/functions'; // Required
+@import 'bootstrap/scss/variables'; // Required
+@import 'bootstrap/scss/mixins'; // Required
+
 html {
     overflow: -moz-scrollbars-vertical;
     overflow-y: scroll;
@@ -44,8 +48,13 @@ img {
 
         img {
             border: 1px solid lightgray;
-            border-radius: 10px;
+            border-radius: $border-radius;
             width: 600px;
+        }
+
+        pre {
+            border: 1px solid lightgray;
+            border-radius: $border-radius;
         }
     }
 }
