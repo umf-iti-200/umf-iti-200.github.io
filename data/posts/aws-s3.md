@@ -126,24 +126,24 @@ In <em>Bucket Policy</em>, click on <em>Edit</em>.
 
 To grant public read access to your website, copy the following bucket policy, and paste it in the <em>Bucket policy editor</em>.
 
-<pre><code className="json language-json">
-  {
-      "Version": "2012-10-17",
-      "Statement": [
-          {
-              "Sid": "PublicReadGetObject",
-              "Effect": "Allow",
-              "Principal": "*",
-              "Action": [
-                  "s3:GetObject"
-              ],
-              "Resource": [
-                  "arn:aws:s3:::&lt;YOUR-BUCKET-NAME&gt;/*"
-              ]
-          }
-      ]
-    }
-</code></pre>
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<YOUR-BUCKET-NAME>/*"
+            ]
+        }
+    ]
+  }
+```
 
 Update <code><YOUR-BUCKET-NAME></code> to match your bucket name. Click <em>Save Changes</em> at the bottom.
 
@@ -171,9 +171,9 @@ Press <em>Upload</em> at the bottom. If everything went well press <em>Done</em>
 
 To access the files inside of the folder, just type on your browser:
 
-<pre><code>
-    http://&lt;YOUR_URL&gt;/images/cat.jpg
-</code></pre>
+```
+http://<YOUR_URL>/images/cat.jpg
+```
 
 You will see the following image:
 
@@ -183,9 +183,9 @@ You will see the following image:
 
 Do you remember when you added an <code>error.html</code> file while setting up the bucket? Look what happens if you try to access an invalid URL for instance
 
-<pre><code>
-    http://&lt;YOUR_URL&gt;/welcome.html
-</code></pre>
+```
+http://<YOUR_URL>/welcome.html
+```
 
 <img src="https://user-images.githubusercontent.com/114015/223291715-119bb01b-313a-4d89-9f98-2d92da8d62a2.png">
 
