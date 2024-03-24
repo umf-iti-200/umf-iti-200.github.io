@@ -88,7 +88,7 @@ Don't forget to change <code>&lt;key_pair_file&gt;.pem</code>. If you don’t ch
 
 ## Windows
 
-Open the Terminal/Console, navigate to the folder which has your .pem file and then type:
+Open the Terminal/Console, navigate to the folder that has your <code>.pem</code> file and then type:
 
 <pre><code className="shell language-shell">
     ssh -i &lt;key_pair_file&gt;.pem ec2-user@&lt;public_ip_from_dashboard&gt;
@@ -134,7 +134,7 @@ Note: if you are familiar with using <strong>homebrew</strong> on your Mac, you 
 
 ## Install Node.js
 
-Follow <a href="https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html" className="external" target="_blank" rel="noreferrer noopener"><span>this link</span></a> for more information. In summary, type the following commands in the terminal:
+Follow <a href="https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html" target="_blank"><span>this link</span></a> for more information. In summary, type the following commands in the terminal:
 
 <pre><code className="shell language-shell">
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
@@ -156,7 +156,7 @@ To install Node.js 16x. Amazon Linux 2 (the free-tier Operating System you selec
 
 ## Your First Node.js application on EC2
 
-Now it is time to run your first application on EC2 by using the content from GitHub. If you don't have an account yet, please <a href="https://github.com/signup" className="external" target="_blank" rel="noreferrer noopener"><span>create one</span></a>.
+Now it is time to run your first application on EC2 by using the content from GitHub. If you don't have an account yet, please <a href="https://github.com/signup" target="_blank"><span>create one</span></a>.
 
 Because your instance does not have Git installed, you need to install it:
 
@@ -164,7 +164,7 @@ Because your instance does not have Git installed, you need to install it:
     yum install git
 </code></pre>
 
-Note: before installing any new tool/package, please make sure you are "root". If you are not, type <code>sudo su</code> in the terminal/console.
+Note: Before installing any new tool/package, please make sure you are "root". If you are not, type <code>sudo su</code> in the terminal/console.
 
 Confirming by typing "y" in the following prompt:
 
@@ -200,7 +200,7 @@ and, finally, you can run your application in the cloud:
 
 <img src="https://user-images.githubusercontent.com/114015/224567576-21e31cd2-c4bc-457d-97a3-79f24d2a65a8.png">
 
-Congratulations! your app is now running in the cloud! Let's see it in action!
+Congratulations! Your app is now running in the cloud! Let's see it in action!
 
 # Visualizing Your Server
 
