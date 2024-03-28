@@ -9,9 +9,9 @@ import { getPosts, findById, getRecentPosts } from "../../api/Posts";
 export default function Posts({ post, recentPosts }) {
 
     const tagsAsHTML = post.tags.map((tag, i) =>
-        <a key={i} href="https://www.google.com">
+        <Link key={i} href={`/tags/${tag}`}>
             <span className="badge bg-primary-subtle text-primary-emphasis border border-primary-subtle rounded-pill me-2">{tag}</span>
-        </a>
+        </Link>
     );
 
     const recentPostsAsHTML = recentPosts.map((post, i) =>
