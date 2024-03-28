@@ -1,6 +1,3 @@
-import { Card } from "react-bootstrap";
-import Link from "next/link";
-
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
 import PostList from "../../components/PostList";

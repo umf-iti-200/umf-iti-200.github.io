@@ -27,12 +27,12 @@ export default function Posts({ post, recentPosts }) {
 
                 <h1 className="title">{post.title}</h1>
 
-                <ul class="list-inline small border-bottom pb-3 text-muted">
-                    <li class="list-inline-item"><Link href={`/authors/${post.authorId}`}>{post.authorName}</Link></li>
-                    <li class="list-inline-item"><span>&#183;</span></li>
-                    <li class="list-inline-item">{post.readingTimeAsText}</li>
-                    <li class="list-inline-item"><span>&#183;</span></li>
-                    <li class="list-inline-item"><span title={post.publishedAt}>{post.publishedFromNow}</span></li>
+                <ul className="list-inline small border-bottom pb-3 text-muted">
+                    <li className="list-inline-item"><Link href={`/authors/${post.authorId}`}>{post.authorName}</Link></li>
+                    <li className="list-inline-item"><span>&#183;</span></li>
+                    <li className="list-inline-item">{post.readingTimeAsText}</li>
+                    <li className="list-inline-item"><span>&#183;</span></li>
+                    <li className="list-inline-item"><span title={post.publishedAt}>{post.publishedFromNow}</span></li>
                 </ul>
 
                 <div className="row">
