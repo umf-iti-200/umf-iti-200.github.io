@@ -1,10 +1,10 @@
+import Link from "next/link";
 import { Card } from "react-bootstrap";
 
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
 
 import { getPosts, findById, getRecentPosts } from "../../api/Posts";
-import Link from "next/link";
 
 export default function Posts({ post, recentPosts }) {
 
