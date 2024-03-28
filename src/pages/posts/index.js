@@ -15,7 +15,7 @@ export default function IndexPage({ posts }) {
             </td>
             <td>{post.category}</td>
             <td>{post.authorName}</td>
-            <td>{post.modifiedAt}</td>
+            <td>{post.publishedAt}</td>
         </tr>
     );
 
@@ -32,7 +32,7 @@ export default function IndexPage({ posts }) {
                         <th>Title</th>
                         <th>Category</th>
                         <th>Author</th>
-                        <th>Updated At</th>
+                        <th>Published At</th>
                     </tr>
                 </thead>
                 <tbody>

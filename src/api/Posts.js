@@ -14,14 +14,11 @@ export function findByFileName(fullPath) {
 
     const { data, content } = matter(fileContent);
 
-    const { birthtime, mtime } = PathUtils.readStats(fullPath);
-
     return {
         ...data,
         id,
         content: converter.makeHtml(content),
-        modifiedAt: DateUtils.parse(mtime),
-        createdAt: DateUtils.parse(birthtime),
+        publishedAt: DateUtils.parse(data.publishedAt)
     };
 }
 
@@ -36,12 +33,18 @@ export function getPosts() {
 
     const files = PathUtils.searchFiles("data/posts/**/*.md");
 
-    return files.map((file) => findByFileName(file));
+    let posts = files.map((file) => findByFileName(file));
+
+    posts = DateUtils.sort(posts, "publishedAt");
+
+    return posts;
 }
 
-export function getRecentPostsByAuthorId() {
+export function getRecentPostsByAuthorId(authorId) {
 
-    const posts = getPosts();
+    let posts = getPosts();
+
+    posts = posts.filter(e => e.authorId === authorId);
 
     return posts.slice(0, 2);
 }

@@ -2,6 +2,7 @@
 title: Create a new AWS Account
 authorName: Thiago Ferreira
 authorId: thiago-ferreira
+publishedAt: March 24, 2024 4:00 PM
 category: Amazon AWS
 tags:
   - aws

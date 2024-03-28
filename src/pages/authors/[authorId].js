@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function AuthorId({ author, recentPosts }) {
 
     const recentPostsAsHTML = recentPosts.map((post, i) =>
-        <li><Link href={`/posts/${post.id}`}>{post.title}</Link></li>
+        <li className="mb-3"><Link href={`/posts/${post.id}`}>{post.title}</Link></li>
     );
 
     return (
@@ -31,6 +31,7 @@ export default function AuthorId({ author, recentPosts }) {
             <ul>
                 {recentPostsAsHTML}
             </ul>
+
         </Layout>
     );
 }

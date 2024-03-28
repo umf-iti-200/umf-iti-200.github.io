@@ -25,7 +25,7 @@ export default function Posts({ post }) {
             <div className="post">
 
                 <h1 className="title">{post.title}</h1>
-                <small className="text-muted">By <Link href={`/authors/${post.authorId}`}>{post.authorName}</Link> | Published: {post.createdAt} | Updated: {post.modifiedAt}</small>
+                <small className="text-muted">By <Link href={`/authors/${post.authorId}`}>{post.authorName}</Link> | Published: {post.publishedAt}</small>
                 <hr />
 
                 <div className="row">

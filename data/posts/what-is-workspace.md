@@ -2,6 +2,7 @@
 title: What is Workspace?
 authorName: Thiago Ferreira
 authorId: thiago-ferreira
+publishedAt: March 12, 2024 3:30 PM
 category: Other
 tags:
   - workspace
