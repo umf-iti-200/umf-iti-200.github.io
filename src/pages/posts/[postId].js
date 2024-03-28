@@ -3,14 +3,9 @@ import { Card } from "react-bootstrap";
 
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
+import PostList from "../../components/PostList";
 
 import { getPosts, findById, getRecentPosts } from "../../api/Posts";
-
-function Badge({ name }) {
-    return (
-        <span className="badge bg-primary-subtle text-primary-emphasis border border-primary-subtle">{name}</span>
-    );
-}
 
 export default function Posts({ post, recentPosts }) {
 
@@ -18,17 +13,6 @@ export default function Posts({ post, recentPosts }) {
         <Link key={i} href={`/tags/${tag}`}>
             <span className="badge bg-primary-subtle text-primary-emphasis border border-primary-subtle rounded-pill me-2">{tag}</span>
         </Link>
-    );
-
-    const recentPostsAsHTML = recentPosts.map((post, i) =>
-        <div key={i}>
-            <p className="mb-0 text-start" key={i}><Link href={`/posts/${post.id}`}>{post.title}</Link></p>
-            <p className="small text-muted border-bottom pb-2 mb-2">
-                {post.authorName}
-                <span className="mx-1">&#183;</span>
-                {post.publishedFromNow}
-            </p>
-        </div>
     );
 
     return (
@@ -70,7 +54,9 @@ export default function Posts({ post, recentPosts }) {
                             </Card>
 
                             <h2 className="fw-bold border-bottom mb-2">Recent Posts</h2>
-                            {recentPostsAsHTML}
+
+                            <PostList posts={recentPosts} />
+
                         </div>
                     </div>
                 </div>
