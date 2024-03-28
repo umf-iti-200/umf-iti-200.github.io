@@ -15,7 +15,11 @@ export default function Posts({ post, recentPosts }) {
     );
 
     const recentPostsAsHTML = recentPosts.map((post, i) =>
-        <li className="mb-3" key={i}><Link href={`/posts/${post.id}`}>{post.title}</Link></li>
+        <>
+            <p className="mb-0" key={i}><Link href={`/posts/${post.id}`}>{post.title}</Link></p>
+            <p className="small text-muted border-bottom pb-2">{post.publishedAt}</p>
+        </>
+
     );
 
     return (
@@ -50,8 +54,7 @@ export default function Posts({ post, recentPosts }) {
                                 </Card.Body>
                             </Card>
 
-                            <h1>Recent Posts</h1>
-
+                            <h2 className="fw-bold border-bottom pb-2">Recent Posts</h2>
                             {recentPostsAsHTML}
                         </div>
                     </div>
