@@ -1,6 +1,7 @@
 ---
 title: Create a new AWS Account
-author: Thiago Ferreira
+authorName: Thiago Ferreira
+authorId: thiago-ferreira
 category: Amazon AWS
 tags:
   - aws

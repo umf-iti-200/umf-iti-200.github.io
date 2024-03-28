@@ -4,39 +4,37 @@ import Table from "react-bootstrap/Table";
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
 
-import { getPosts } from "../../api/Posts";
+import { getAuthors } from "../../api/Authors";
 
-export default function IndexPage({ posts }) {
+export default function IndexPage({ authors }) {
 
-    const postsAsHTML = posts.map((post, i) =>
+    const authorsAsHTML = authors.map((author, i) =>
         <tr key={i}>
             <td>
-                <Link href={`posts/${post.id}`}>{post.title}</Link>
+                <Link href={`authors/${author.id}`}>{author.name}</Link>
             </td>
-            <td>{post.category}</td>
-            <td>{post.authorName}</td>
-            <td>{post.modifiedAt}</td>
+            <td>
+                {author.title}
+            </td>
         </tr>
     );
 
     return (
-        <Layout menu="Posts">
+        <Layout menu="Authors">
 
             <Breadcrumb>
-                <Breadcrumb.Item>Posts</Breadcrumb.Item>
+                <Breadcrumb.Item>Authors</Breadcrumb.Item>
             </Breadcrumb>
 
             <Table striped>
                 <thead>
                     <tr>
+                        <th>Name</th>
                         <th>Title</th>
-                        <th>Category</th>
-                        <th>Author</th>
-                        <th>Updated At</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {postsAsHTML}
+                    {authorsAsHTML}
                 </tbody>
             </Table>
         </Layout>
@@ -47,7 +45,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            posts: getPosts()
+            authors: getAuthors()
         }
     };
 }

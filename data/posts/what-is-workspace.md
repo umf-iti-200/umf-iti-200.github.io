@@ -1,6 +1,7 @@
 ---
 title: What is Workspace?
-author: Thiago Ferreira
+authorName: Thiago Ferreira
+authorId: thiago-ferreira
 category: Other
 tags:
   - workspace

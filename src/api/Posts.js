@@ -39,6 +39,13 @@ export function getPosts() {
     return files.map((file) => findByFileName(file));
 }
 
+export function getRecentPostsByAuthorId() {
+
+    const posts = getPosts();
+
+    return posts.slice(0, 2);
+}
+
 export function getCategories() {
 
     const posts = getPosts();

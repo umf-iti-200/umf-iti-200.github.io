@@ -54,14 +54,9 @@ class PathUtils {
 
     static readYml(fullPath) {
 
-        return new Promise((resolve, reject) => {
+        const content = PathUtils.readFileContent(fullPath);
 
-            PathUtils.readFileContent(fullPath).then((contents) => {
-
-                resolve(yaml.load(contents));
-
-            }).catch(reject);
-        });
+        return yaml.load(content);
     }
 }
 

@@ -1,6 +1,7 @@
 ---
 title: AWS S3 (Simple Storage Service)
-author: Thiago Ferreira
+authorName: Thiago Ferreira
+authorId: thiago-ferreira
 category: Amazon AWS
 tags:
   - aws

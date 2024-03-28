@@ -1,6 +1,7 @@
 ---
 title: AWS EC2 (Elastic Compute Cloud)
-author: Thiago Ferreira
+authorName: Thiago Ferreira
+authorId: thiago-ferreira
 category: Amazon AWS
 tags:
   - aws

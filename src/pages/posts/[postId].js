@@ -1,6 +1,7 @@
 import { Card } from "react-bootstrap";
 
 import Layout from "../../components/Layout";
+import Breadcrumb from "../../components/Breadcrumb";
 
 import { getPosts, findById } from "../../api/Posts";
 import Link from "next/link";
@@ -16,35 +17,21 @@ export default function Posts({ post }) {
     return (
         <Layout title={post.title}>
 
-            <nav>
-                <ol className="breadcrumb breadcrumb-chevron bg-body-tertiary rounded-3 p-3">
-                    <li className="breadcrumb-item">
-                        <Link href="/">
-                            <i className="bi bi-house-door-fill"></i>
-                            <span className="visually-hidden">Home</span>
-                        </Link>
-                    </li>
-                    <li className="breadcrumb-item">
-                        <Link href="/posts" className="text-decoration-none">
-                            Posts
-                        </Link>
-                    </li>
-                    <li className="breadcrumb-item active">
-                        {post.title}
-                    </li>
-                </ol>
-            </nav>
+            <Breadcrumb>
+                <Breadcrumb.Item href="/posts">Posts</Breadcrumb.Item>
+                <Breadcrumb.Item>{post.title}</Breadcrumb.Item>
+            </Breadcrumb>
 
             <div className="post">
-                <div className="header">
-                    <h1>{post.title}</h1>
-                    <small className="text-muted">By Thiago Ferreira | Published: {post.createdAt} | Updated: {post.modifiedAt}</small>
-                    <hr />
-                </div>
+
+                <h1 className="title">{post.title}</h1>
+                <small className="text-muted">By <Link href={`/authors/${post.authorId}`}>{post.authorName}</Link> | Published: {post.createdAt} | Updated: {post.modifiedAt}</small>
+                <hr />
+
                 <div className="row">
-                    <div className="body col-12 col-lg-9 col-xxl-10 mb-3" dangerouslySetInnerHTML={{ __html: post.content }}>
+                    <div className="col-12 col-lg-9 col-xxl-10 mb-3" dangerouslySetInnerHTML={{ __html: post.content }}>
                     </div>
-                    <div className="sidepanel col-12 col-lg-3 col-xxl-2">
+                    <div className="col-12 col-lg-3 col-xxl-2">
                         <Card className="mb-3">
                             <Card.Header className="fw-bold">Category</Card.Header>
                             <Card.Body>
@@ -71,7 +58,7 @@ export async function getStaticPaths() {
 
     const paths = posts.map((post) => ({
         params: {
-            id: post.id,
+            postId: post.id,
         },
     }));
 
@@ -82,7 +69,7 @@ export async function getStaticProps({ params }) {
 
     return {
         props: {
-            post: findById(params.id)
+            post: findById(params.postId)
         }
     };
 }
