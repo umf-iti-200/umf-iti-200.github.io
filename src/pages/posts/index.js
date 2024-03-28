@@ -10,9 +10,12 @@ export default function IndexPage({ posts }) {
     return (
         <Layout menu="Posts">
 
+
             <Breadcrumb>
                 <Breadcrumb.Item>Posts</Breadcrumb.Item>
             </Breadcrumb>
+
+            <h1 className="title pb-3 border-bottom">Posts</h1>
 
             <PostList posts={posts} />
 

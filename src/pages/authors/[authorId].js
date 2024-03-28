@@ -18,8 +18,7 @@ export default function AuthorId({ author, recentPosts }) {
                 <Breadcrumb.Item>{author.name}</Breadcrumb.Item>
             </Breadcrumb>
 
-            <h1 className="title">{author.name}</h1>
-            <hr />
+            <h1 className="title pb-3 border-bottom">{author.name}</h1>
 
             <h1>Bio</h1>
             <p>{author.bio}</p>
