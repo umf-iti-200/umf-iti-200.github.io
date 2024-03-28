@@ -19,17 +19,6 @@ export default function IndexPage({ posts }) {
         </div>
     );
 
-    const postsAsHTML = posts.map((post, i) =>
-        <tr key={i}>
-            <td>
-                <Link href={`posts/${post.id}`}>{post.title}</Link>
-            </td>
-            <td>{post.category}</td>
-            <td>{post.authorName}</td>
-            <td>{post.publishedFromNow}</td>
-        </tr>
-    );
-
     return (
         <Layout menu="Posts">
 
@@ -37,21 +26,8 @@ export default function IndexPage({ posts }) {
                 <Breadcrumb.Item>Posts</Breadcrumb.Item>
             </Breadcrumb>
 
-            <Table striped>
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Category</th>
-                        <th>Author</th>
-                        <th>Published At</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {postsAsHTML}
-                </tbody>
-            </Table>
-
             {recentPostsAsHTML}
+
         </Layout>
     );
 };
