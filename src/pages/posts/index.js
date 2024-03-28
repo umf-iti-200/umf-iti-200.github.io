@@ -8,6 +8,17 @@ import { getPosts } from "../../api/Posts";
 
 export default function IndexPage({ posts }) {
 
+    const recentPostsAsHTML = posts.map((post, i) =>
+        <div key={i}>
+            <p className="mb-0 text-start" key={i}><Link href={`/posts/${post.id}`}>{post.title}</Link></p>
+            <p className="small text-muted border-bottom pb-2 mb-2">
+                {post.authorName}
+                <span className="mx-1">&#183;</span>
+                {post.publishedFromNow}
+            </p>
+        </div>
+    );
+
     const postsAsHTML = posts.map((post, i) =>
         <tr key={i}>
             <td>
@@ -15,7 +26,7 @@ export default function IndexPage({ posts }) {
             </td>
             <td>{post.category}</td>
             <td>{post.authorName}</td>
-            <td>{post.publishedAt}</td>
+            <td>{post.publishedFromNow}</td>
         </tr>
     );
 
@@ -39,6 +50,8 @@ export default function IndexPage({ posts }) {
                     {postsAsHTML}
                 </tbody>
             </Table>
+
+            {recentPostsAsHTML}
         </Layout>
     );
 };

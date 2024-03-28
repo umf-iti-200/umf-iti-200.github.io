@@ -1,5 +1,6 @@
 import matter from "gray-matter";
 import showdown from "showdown";
+import readingTime from "reading-time";
 
 import PathUtils from "../utils/PathUtils";
 import DateUtils from "../utils/DateUtils";
@@ -14,11 +15,15 @@ export function findByFileName(fullPath) {
 
     const { data, content } = matter(fileContent);
 
+    const publishedAt = DateUtils.parse(data.publishedAt);
+
     return {
         ...data,
         id,
         content: converter.makeHtml(content),
-        publishedAt: DateUtils.parse(data.publishedAt)
+        readingTimeAsText: readingTime(content).text,
+        publishedAt: DateUtils.format(publishedAt),
+        publishedFromNow: DateUtils.fromNow(publishedAt)
     };
 }
 

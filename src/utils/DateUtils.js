@@ -2,16 +2,26 @@ import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
+import relativeTime from "dayjs/plugin/relativeTime";
 
 dayjs.extend(localizedFormat);
 dayjs.extend(utc);
 dayjs.extend(timezone);
+dayjs.extend(relativeTime);
 
 export default class DateUtils {
 
-    static parse(date, format = "LLL") {
+    static fromNow(dateInDayJs) {
+        return dateInDayJs.fromNow();
+    }
 
-        return dayjs(date).tz("America/Detroit").format(format);
+    static format(dateInDayJs, format = "LLL") {
+        return dateInDayJs.format(format);
+    }
+
+    static parse(date) {
+
+        return dayjs(date).tz("America/Detroit");
     }
 
     static sort(array, key) {

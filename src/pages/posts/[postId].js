@@ -6,6 +6,12 @@ import Breadcrumb from "../../components/Breadcrumb";
 
 import { getPosts, findById, getRecentPosts } from "../../api/Posts";
 
+function Badge({ name }) {
+    return (
+        <span className="badge bg-primary-subtle text-primary-emphasis border border-primary-subtle">{name}</span>
+    );
+}
+
 export default function Posts({ post, recentPosts }) {
 
     const tagsAsHTML = post.tags.map((tag, i) =>
@@ -17,9 +23,12 @@ export default function Posts({ post, recentPosts }) {
     const recentPostsAsHTML = recentPosts.map((post, i) =>
         <div key={i}>
             <p className="mb-0 text-start" key={i}><Link href={`/posts/${post.id}`}>{post.title}</Link></p>
-            <p className="small text-muted border-bottom pb-2 mb-2">{post.publishedAt}</p>
+            <p className="small text-muted border-bottom pb-2 mb-2">
+                {post.authorName}
+                <span className="mx-1">&#183;</span>
+                {post.publishedFromNow}
+            </p>
         </div>
-
     );
 
     return (
@@ -33,8 +42,14 @@ export default function Posts({ post, recentPosts }) {
             <div className="post">
 
                 <h1 className="title">{post.title}</h1>
-                <small className="text-muted">By <Link href={`/authors/${post.authorId}`}>{post.authorName}</Link> | Published: {post.publishedAt}</small>
-                <hr />
+
+                <ul class="list-inline small border-bottom pb-3 text-muted">
+                    <li class="list-inline-item"><Link href={`/authors/${post.authorId}`}>{post.authorName}</Link></li>
+                    <li class="list-inline-item"><span>&#183;</span></li>
+                    <li class="list-inline-item">{post.readingTimeAsText}</li>
+                    <li class="list-inline-item"><span>&#183;</span></li>
+                    <li class="list-inline-item"><span title={post.publishedAt}>{post.publishedFromNow}</span></li>
+                </ul>
 
                 <div className="row">
                     <div className="col-12 col-lg-9 col-xxl-9 mb-3" dangerouslySetInnerHTML={{ __html: post.content }}>
