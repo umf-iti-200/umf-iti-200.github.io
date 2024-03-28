@@ -29,21 +29,24 @@ export default function Posts({ post }) {
                 <hr />
 
                 <div className="row">
-                    <div className="col-12 col-lg-9 col-xxl-10 mb-3" dangerouslySetInnerHTML={{ __html: post.content }}>
+                    <div className="col-12 col-lg-9 col-xxl-9 mb-3" dangerouslySetInnerHTML={{ __html: post.content }}>
                     </div>
-                    <div className="col-12 col-lg-3 col-xxl-2">
-                        <Card className="mb-3">
-                            <Card.Header className="fw-bold">Category</Card.Header>
-                            <Card.Body>
-                                {post.category}
-                            </Card.Body>
-                        </Card>
-                        <Card className="mb-3">
-                            <Card.Header className="fw-bold">Tags</Card.Header>
-                            <Card.Body>
-                                {tagsAsHTML}
-                            </Card.Body>
-                        </Card>
+                    <div className="col-12 col-lg-3 col-xxl-3">
+                        <div className="position-sticky" style={{ "top": "5rem" }}>
+                            <Card className="mb-3 mt-3">
+                                <Card.Header className="fw-bold">Category</Card.Header>
+                                <Card.Body>
+                                    {post.category}
+                                </Card.Body>
+                            </Card>
+                            <Card className="mb-3">
+                                <Card.Header className="fw-bold">Tags</Card.Header>
+                                <Card.Body>
+                                    {tagsAsHTML}
+                                </Card.Body>
+                            </Card>
+
+                        </div>
                     </div>
                 </div>
             </div>
