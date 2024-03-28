@@ -3,15 +3,19 @@ import { Card } from "react-bootstrap";
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
 
-import { getPosts, findById } from "../../api/Posts";
+import { getPosts, findById, getRecentPosts } from "../../api/Posts";
 import Link from "next/link";
 
-export default function Posts({ post }) {
+export default function Posts({ post, recentPosts }) {
 
     const tagsAsHTML = post.tags.map((tag, i) =>
         <a key={i} href="https://www.google.com">
             <span className="badge bg-primary-subtle text-primary-emphasis border border-primary-subtle rounded-pill me-2">{tag}</span>
         </a>
+    );
+
+    const recentPostsAsHTML = recentPosts.map((post, i) =>
+        <li className="mb-3" key={i}><Link href={`/posts/${post.id}`}>{post.title}</Link></li>
     );
 
     return (
@@ -46,6 +50,9 @@ export default function Posts({ post }) {
                                 </Card.Body>
                             </Card>
 
+                            <h1>Recent Posts</h1>
+
+                            {recentPostsAsHTML}
                         </div>
                     </div>
                 </div>
@@ -72,7 +79,8 @@ export async function getStaticProps({ params }) {
 
     return {
         props: {
-            post: findById(params.postId)
+            post: findById(params.postId),
+            recentPosts: getRecentPosts()
         }
     };
 }

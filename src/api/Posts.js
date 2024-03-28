@@ -40,13 +40,20 @@ export function getPosts() {
     return posts;
 }
 
-export function getRecentPostsByAuthorId(authorId) {
+export function getRecentPosts(size = 3) {
+
+    let posts = getPosts();
+
+    return posts.slice(0, size);
+}
+
+export function getRecentPostsByAuthorId(authorId, size = 3) {
 
     let posts = getPosts();
 
     posts = posts.filter(e => e.authorId === authorId);
 
-    return posts.slice(0, 2);
+    return posts.slice(0, size);
 }
 
 export function getCategories() {
