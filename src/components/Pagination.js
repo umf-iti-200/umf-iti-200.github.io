@@ -1,12 +1,10 @@
 import Link from "next/link";
 
-import Settings from "../../data/settings.json";
-
 function PreviousButton({ href, disabled = false }) {
 
     return (
         <li className={`page-item ${disabled ? "disabled" : ""}`}>
-            <Link class="page-link" href={disabled ? "#" : href}>&#8592; Previous</Link>
+            <Link className="page-link" href={disabled ? "#" : href}>&#8592; Previous</Link>
         </li>
     );
 }
@@ -15,7 +13,7 @@ function NextButton({ href, disabled = false }) {
 
     return (
         <li className={`page-item ${disabled ? "disabled" : ""}`}>
-            <Link class="page-link" href={disabled ? "#" : href}>Next &#8594;</Link>
+            <Link className="page-link" href={disabled ? "#" : href}>Next &#8594;</Link>
         </li>
     );
 }

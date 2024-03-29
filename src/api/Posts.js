@@ -4,7 +4,6 @@ import readingTime from "reading-time";
 
 import PathUtils from "../utils/PathUtils";
 import DateUtils from "../utils/DateUtils";
-import ArrayUtils from "../utils/ArrayUtils";
 
 const converter = new showdown.Converter();
 
