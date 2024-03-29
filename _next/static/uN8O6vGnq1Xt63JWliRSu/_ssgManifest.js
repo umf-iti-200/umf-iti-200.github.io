@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fauthors","\u002Fauthors\u002F[authorId]","\u002Fposts","\u002Fposts\u002F[postId]","\u002Fposts\u002Fpage\u002F[pageNumber]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
