@@ -35,15 +35,13 @@ export function findById(id) {
     return findByFileName(fullPath);
 }
 
-export function getPosts(pageNumber = 1, pageSize = 5) {
+export function getPosts() {
 
     const files = PathUtils.searchFiles("data/posts/**/*.md");
 
     let posts = files.map((file) => findByFileName(file));
 
-    posts = DateUtils.sort(posts, "publishedAt");
-
-    return ArrayUtils.paginate(posts, pageNumber, pageSize);
+    return DateUtils.sort(posts, "publishedAt");
 }
 
 export function getRecentPosts(size = 3) {

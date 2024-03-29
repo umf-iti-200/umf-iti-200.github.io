@@ -1,33 +1,22 @@
-import Layout from "../../components/Layout";
-import Breadcrumb from "../../components/Breadcrumb";
-
 import { getPosts } from "../../api/Posts";
 
-import PostList from "../../components/PostList";
+import PostPage from "./page/[pageNumber]";
 
-export default function IndexPage({ posts }) {
+import Settings from "../../../data/settings.json";
 
-    return (
-        <Layout menu="Posts">
+export default function IndexPage({ pageNumber, posts }) {
 
-
-            <Breadcrumb>
-                <Breadcrumb.Item>Posts</Breadcrumb.Item>
-            </Breadcrumb>
-
-            <h1 className="title pb-3 border-bottom">Posts</h1>
-
-            <PostList posts={posts} />
-
-        </Layout>
-    );
+    return PostPage({ pageNumber, posts });
 };
 
 export async function getStaticProps() {
 
+    const pageNumber = 1;
+
     return {
         props: {
-            posts: getPosts()
+            pageNumber,
+            posts: getPosts(pageNumber, Settings.pageSize)
         }
     };
 }
