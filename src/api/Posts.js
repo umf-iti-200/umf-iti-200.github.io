@@ -35,7 +35,7 @@ export function findById(id) {
     return findByFileName(fullPath);
 }
 
-export function getPosts(pageNumber = 1, pageSize = 10) {
+export function getPosts(pageNumber = 1, pageSize = 5) {
 
     const files = PathUtils.searchFiles("data/posts/**/*.md");
 
