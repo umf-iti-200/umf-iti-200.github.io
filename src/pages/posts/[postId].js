@@ -9,11 +9,6 @@ import PostList from "../../components/PostList";
 
 import { getPosts, findById, getRecentPosts } from "../../api/Posts";
 
-function imageLoader({ src, width, quality }) {
-    console.log(src)
-    return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
-}
-
 export default function Posts({ post, recentPosts }) {
 
     const tagsAsHTML = post.tags.map((tag, i) =>
