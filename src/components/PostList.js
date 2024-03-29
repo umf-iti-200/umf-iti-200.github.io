@@ -6,9 +6,9 @@ export default function PostList({posts}) {
         <div key={i}>
             <p className="mb-0 text-start" key={i}><Link href={`/posts/${post.id}`}>{post.title}</Link></p>
             <p className="small text-muted border-bottom pb-2 mb-2">
-                {post.authorName}
+                <span>{post.authorName}</span>
                 <span className="mx-1">&#183;</span>
-                {post.publishedFromNow}
+                <span title={post.publishedAt}>{post.publishedFromNow}</span>
             </p>
         </div>
     );
