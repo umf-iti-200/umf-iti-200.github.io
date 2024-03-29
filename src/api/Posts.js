@@ -4,6 +4,7 @@ import readingTime from "reading-time";
 
 import PathUtils from "../utils/PathUtils";
 import DateUtils from "../utils/DateUtils";
+import ArrayUtils from "../utils/ArrayUtils";
 
 const converter = new showdown.Converter();
 
@@ -34,7 +35,7 @@ export function findById(id) {
     return findByFileName(fullPath);
 }
 
-export function getPosts() {
+export function getPosts(pageNumber = 1, pageSize = 10) {
 
     const files = PathUtils.searchFiles("data/posts/**/*.md");
 
@@ -42,7 +43,7 @@ export function getPosts() {
 
     posts = DateUtils.sort(posts, "publishedAt");
 
-    return posts;
+    return ArrayUtils.paginate(posts, pageNumber, pageSize);
 }
 
 export function getRecentPosts(size = 3) {
