@@ -26,10 +26,10 @@ export default function Posts({ post, recentPosts }) {
         replace(domNode) {
             if (domNode.name === "img") {
 
-                let { src, width, height } = domNode.attribs;
+                let { src, width, height, alt } = domNode.attribs;
 
                 if (!(src.startsWith("http://") || src.startsWith("https://"))) {
-                    src = `/images/${post.id}/${src}`;
+                    src = `/images/posts/${post.id}/${src}`;
                 }
 
                 return <Image
@@ -37,7 +37,7 @@ export default function Posts({ post, recentPosts }) {
                     src={src}
                     width={width || 500}
                     height={height || 500}
-                    alt="alternative text"
+                    alt={alt || "alternative text"}
                 />;
             }
         },
@@ -62,8 +62,6 @@ export default function Posts({ post, recentPosts }) {
             </ul>
 
             <div className="row">
-                {/* <div className="col-12 col-lg-9 col-xxl-9 mb-3" dangerouslySetInnerHTML={{ __html: post.content }}>
-                </div> */}
                 <div className="col-12 col-lg-9 col-xxl-9 mb-3">
                     {bodyAsHTML}
                 </div>
