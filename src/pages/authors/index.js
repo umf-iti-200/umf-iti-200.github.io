@@ -26,6 +26,8 @@ export default function IndexPage({ authors }) {
                 <Breadcrumb.Item>Authors</Breadcrumb.Item>
             </Breadcrumb>
 
+            <h1 className="title pb-3 border-bottom">Authors</h1>
+
             <Table striped>
                 <thead>
                     <tr>

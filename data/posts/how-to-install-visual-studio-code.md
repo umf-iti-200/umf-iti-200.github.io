@@ -21,7 +21,7 @@ Access [https://code.visualstudio.com](https://code.visualstudio.com), click on 
 
 <img width="400" height="400" src="mac-1.png">
 
-This will download a `.zip` file that will automatically unzipped by MacOS into a `.app` file as you can see in the image below. Just drag and drop this icon to a folder called `Application` usually located in the left sidebar.
+Your browser will download a `.zip` file. Open the Finder to see it. MacOS might automatically unzip it into a `.app` file, as you can see in the image below. Just drag and drop this icon to a folder called `Application` usually located in the left sidebar.
 
 <img width="300" height="300" src="mac-2.png">
 
