@@ -37,6 +37,11 @@ Congratulations. You have installed VS Code on your machine. Just select your pr
 
 <img width="500" height="500" src="mac-6.png">
 
-This shows that your VS Code is up and running.
+The image below shows that your VS Code is up and running.
 
 <img width="500" height="500" src="mac-7.png">
+
+# References
+
+ - [https://code.visualstudio.com](https://code.visualstudio.com)
+ - [https://code.visualstudio.com/docs/setup/mac](https://code.visualstudio.com/docs/setup/mac)
