@@ -10,45 +10,45 @@ tags:
   - ec2
 ---
 
+# Introduction
+
+Amazon EC2 (Elastic Compute Cloud) is a simple web interface to create and manage Amazon EC2 instances and resources. Using this service, you can create and manage your servers. Amazon EC2 offers the broadest and deepest **computing platform**, with over 500 instances and a choice of the latest processor, storage, networking, operating system, and purchase model to help you best match the needs of your workload.
+
 # Before You Begin
 
-If you did not create yet an AWS account, please follow <a href="../amazon-aws/create-a-new-aws-account.html">this tutorial</a>. If you already have an account, just sign in to Console.
+If you did not create yet an AWS account, please follow <a href="/posts/create-a-new-aws-account">this tutorial</a>. If you already have an account, just sign in to Console.
 
-## Create an EC2 Server
+# Create an EC2 Server
 
 On your Console Home, look for <code>Services</code> on the top navbar and then go to <code>Compute → EC2</code>.
 
 <img  src="https://user-images.githubusercontent.com/114015/224560899-a2534981-9fcb-46c7-98ff-5d8c6c07eadf.png">
 
-Amazon EC2 offers the broadest and deepest <strong>computing platform</strong>, with over 500 instances and a choice of the latest processor, storage, networking, operating system, and purchase model to help you best match the needs of your workload.
-
 When you access EC2, the image below shows its homepage.
 
 <img src="https://user-images.githubusercontent.com/114015/224561673-c1280961-d58c-4422-9aab-df733bef2ba5.png">
 
-As you can see, the figure shows 0 instances running. To make it clearer, suppose that an instance is a computer running in the cloud (or just a "virtual computer"). If you would like to create a new instance, on the homepage, search for <em>Launch Instance</em>. You are going to answer several questions while setting up a new instance.
+If this is your first time accessing this service, you will see 0 instances running. But, what is an instance? An instance is a computer running in the cloud (or just a "virtual computer"). If you would like to create a new instance, on the homepage, search for <em>Launch Instance</em>. You are going to answer several questions while setting up a new instance.
 
 <img width="250" src="https://user-images.githubusercontent.com/114015/224561798-4642b88d-911d-4aea-a386-0d0862978e92.png">
 
-The first information is the name of your instance.
+The first information is the name of your instance. For this tutorial, just type <code>backend-server</code>. However, you may pick another name based on your preference.
 
 <img width="250" src="https://user-images.githubusercontent.com/114015/224561921-222fc68d-d4d7-4b30-a37c-fcc245554f7a.png">
-
-For this lesson, just type <code>backend-server</code>. However, you may pick another name based on your preference.
 
 The second step is to select the <em>Application and OS images</em>. In this one, you will set which Operating System are you planning to use. Because we want to use the free tier of Amazon AWS, it is important to keep the 'default' settings as stated in the image below. Anything other than that can cost you extra money.
 
 <img src="https://user-images.githubusercontent.com/114015/224562139-dd5292db-4e34-4e97-a364-1097445489fb.png">
 
-The next type is the <em>Instance Type</em>. Here you are going to select how "powerful" the instance is. Again, we want to be under the free tier. So, select <code>t2.micro</code>. As you can see, this machine has only 1 vCPU (or Virtual CPU) and 1 GiB as RAM. This is sufficient for this class. Again, avoid selecting other types. It will cost you extra money.
+The next type is the <em>Instance Type</em>. Here you are going to select how "powerful" the instance is. Again, we want to be under the free tier. So, select <code>t2.micro</code>. As you can see, this machine has only 1 vCPU (or Virtual CPU) and 1 GiB as RAM. This is sufficient for this tutorial. Again, avoid selecting other types. It will cost you extra money.
 
 <img src="https://user-images.githubusercontent.com/114015/224562246-ef58a892-f151-487c-94c7-cc7850cd0d61.png">
 
-The next step is the <em>Key pair (login)</em>. Once you have your instances ready and running, you will need this information to access them because AWS EC2 uses SSH to access instances. So, let's create a new key pair.
+The next step is the <em>Key pair (login)</em>. Once you have your instances ready and running, you will need this information to access them because AWS EC2 uses [SSH](https://en.wikipedia.org/wiki/Secure_Shell) to access instances. So, let's create a new key pair.
 
 <img  src="https://user-images.githubusercontent.com/114015/224562538-e3f6d78d-43ba-4597-a713-dc72d9c6c92d.png">
 
-A dialog window will open. Just type a name for your key pair and keep the remaining options set as default. As a suggestion for this class, just type your first name. Press <em>Create a key pair</em>.
+A dialog window will open. Just type a name for your key pair and keep the remaining options set as default. As a suggestion for this tutorial, just type your **first name** and keep the current selection as it is. Press <em>Create key pair</em>.
 
 <img width="250" src="https://user-images.githubusercontent.com/114015/224562656-efaf808f-83e5-4cf6-927f-ab6ee344e35c.png">
 
@@ -56,7 +56,7 @@ If everything goes well, you will be asked to download a file <code>&lt;YOUR_NAM
 
 <img width="250" src="https://user-images.githubusercontent.com/114015/224562750-f071b083-c902-44b2-adc0-ecd912c5c978.png">
 
-The next step is to select <em>Network Type</em>. You will choose the type of traffic your "virtual laptop" will allow from the outside. Just for this course, select HTTPS and HTTP. In a real or production environment, I would recommend you select only HTTPS.
+The next step is to select <em>Network Type</em>. You will choose the type of traffic your "virtual laptop" will allow from the outside. Just for this tutorial, select HTTPS and HTTP. In a real or production environment, I would recommend you select only HTTPS.
 
 <img width="250" src="https://user-images.githubusercontent.com/114015/224562920-4fcb6d3c-b942-41a1-ad3f-5f10f2ea6b51.png">
 
@@ -252,6 +252,6 @@ Navigate to your EC2 dashboard (where you can see the list of all your instances
 
 <img src="https://user-images.githubusercontent.com/114015/224570572-f7c904b8-f8d9-437d-9d09-a0c27bdb7b1b.png">
 
-<div className="alert alert-danger" role="alert">
+<div className="alert alert-danger">
     <i className="bi bi-exclamation-triangle me-2"></i>Don't forget to stop all instances after this lesson.
 </div>
