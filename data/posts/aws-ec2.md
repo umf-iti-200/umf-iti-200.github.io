@@ -52,7 +52,7 @@ A dialog window will open. Just type a name for your key pair and keep the remai
 
 <img width="250" src="https://user-images.githubusercontent.com/114015/224562656-efaf808f-83e5-4cf6-927f-ab6ee344e35c.png">
 
-If everything goes well, you will be asked to download a file <code>&lt;YOUR_NAME&gt;.pem</code> and then you should see the key pair you have just created as selected.
+If everything goes well, you will be asked to download a file <code><YOUR_NAME>.pem</code> and then you should see the key pair you have just created as selected.
 
 <img width="250" src="https://user-images.githubusercontent.com/114015/224562750-f071b083-c902-44b2-adc0-ecd912c5c978.png">
 
@@ -83,20 +83,20 @@ If you click on it, you can see that your instance is now running.
 If you are using Linux or Mac, you need to change the permissions on your key pair file by typing the following command:
 
 ```shell
-chmod 400 <key_pair_file>.pem
+chmod 400 <YOUR_NAME>.pem
 ```
 
-Don't forget to change <code>&lt;key_pair_file&gt;.pem</code>. If you don’t change the permission, the key pair is considered <em>too permissive</em>, or unsafe, because it is ostensibly readable by other users and then you won't be able to SSH into the EC2 instance as a result. Now you only need to follow the same steps for <a href="#windows">Windows</a>
+Don't forget to change <code><YOUR_NAME>.pem</code>. If you don’t change the permission, the key pair is considered <em>too permissive</em>, or unsafe, because it is ostensibly readable by other users and then you won't be able to SSH into the EC2 instance as a result. Now you only need to follow the same steps for <a href="#windows">Windows</a>
 
 ## Windows
 
 Open the Terminal/Console, navigate to the folder that has your <code>.pem</code> file and then type:
 
 ```shell
-ssh -i <key_pair_file>.pem ec2-user@<public_ip_from_dashboard>;
+ssh -i <YOUR_NAME>.pem ec2-user@<public_ip_from_dashboard>
 ```
 
-You need to replace <code>public_ip_from_dashboard</code>. On your EC2 dashboard, select the instance you have just created.
+You need to replace <code><public_ip_from_dashboard></code>. On your EC2 dashboard, select the instance you have just created.
 
 <img src="https://user-images.githubusercontent.com/114015/224564789-f0f3b12b-2a52-4439-b437-7bfeca32779e.png">
 
@@ -104,17 +104,17 @@ Look for "Public IPv4 address". This is the IP you will need to access your inst
 
 <img src="https://user-images.githubusercontent.com/114015/224564855-2837c819-4fa1-4cad-82ad-99e996d09cd0.png">
 
-<div className="alert alert-warning" role="alert">
+<div className="alert alert-warning">
     Use this IP <strong>only</strong> for SSH.
 </div>
 
-Now it is time to access your instance. On the terminal, type again the aforementioned command with the correct IP.
+Now it is time to access your instance. On the terminal, type again the aforementioned command with the correct IP. For the first question, just type "yes" and then press enter. Your computer will ask this only once.
 
 <img src="https://user-images.githubusercontent.com/114015/224565060-bd94d7d9-c36c-42fc-9096-6c20450242fb.png">
 
 Congratulations! Now you are accessing the instance you have just created! At this point, your terminal is now interacting directly with your EC2 instance (aka your "virtual computer") - <strong>rather than your physical machine</strong>.
 
-<div className="alert alert-warning" role="alert">
+<div className="alert alert-warning">
     The next commands will be executed in your instance, so keep the terminal open.
 </div>
 
@@ -134,29 +134,23 @@ yum update -y
 
 Note: if you are familiar with using <strong>homebrew</strong> on your Mac, you can think of the way we are using yum here as similar to <strong>brew</strong>.
 
-## Install Node.js
+# Install Node.js
 
 Follow <a href="https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html" target="_blank"><span>this link</span></a> for more information. In summary, type the following commands in the terminal:
 
 ```shell
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
 
-This will download the installer. Then type the following:
+This will download the installer. Then type the following to install Node.js:
 
 ```shell
-. ~/.nvm/nvm.sh
+. ~/.nvm/nvm.sh & nvm install --lts
 ```
 
-To execute the installer. Finally:
+This command will install the LTS (Long Term Support) version. At the time of this tutorial being written, the LTS version is 20.
 
-```shell
-nvm install 16
-```
-
-To install Node.js 16x. Amazon Linux 2 (the free-tier Operating System you selected) does not currently support the current LTS release (version <code>18.x</code>) of Node.js. We should use Node.js version <code>16.x</code>. If you would like to install the most recent version, you should pick another Operating System.
-
-## Your First Node.js application on EC2
+# Your First Node.js application on EC2
 
 Now it is time to run your first application on EC2 by using the content from GitHub. If you don't have an account yet, please <a href="https://github.com/signup" target="_blank"><span>create one</span></a>.
 
@@ -212,7 +206,7 @@ Open your EC2 dashboard on your browser. Select the instance you created earlier
 
 Open your browser and type it:
 
-```url
+```
 http://<SERVER_URL>:3000
 ```
 
@@ -242,7 +236,7 @@ Finally, Click on <em>Save rules</em>. You should come up with something similar
 
 <img src="https://user-images.githubusercontent.com/114015/224569912-1e6a7300-50f8-4c5c-a144-4745f2a866c9.png">
 
-Go back to your browser and refresh the website. Guess what? Now you should be able to see your server running!
+Go back to your browser and refresh the website. Guess what? Now you should be able to see your server running! If you don't see the page running, change it from "https" to "http".
 
 <img src="https://user-images.githubusercontent.com/114015/224570097-9bdd6898-f751-44d7-8a20-7564006c8ba9.png">
 
