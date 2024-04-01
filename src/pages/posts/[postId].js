@@ -19,6 +19,7 @@ export default function Posts({ post, recentPosts }) {
 
     const bodyAsHTML = parse(post.content, {
         replace(domNode) {
+
             if (domNode.name === "img") {
 
                 let { src, width, height, alt } = domNode.attribs;
@@ -34,6 +35,19 @@ export default function Posts({ post, recentPosts }) {
                     height={height || 500}
                     alt={alt || "alternative text"}
                 />;
+            }
+
+            if (domNode.name === "a") {
+
+                let { href } = domNode.attribs;
+                let { children } = domNode;
+
+                if (!(href.startsWith("http://") || href.startsWith("https://"))) {
+
+                    if (children.length === 1 && children[0].type === "text") {
+                        return <Link href={href}> {children[0].data} </Link>;
+                    }
+                }
             }
         },
     });
