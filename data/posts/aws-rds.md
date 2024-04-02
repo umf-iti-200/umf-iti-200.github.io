@@ -228,6 +228,10 @@ Congratulations! You are now running the app entirely in the cloud.
 
 <img width="534" src="https://user-images.githubusercontent.com/114015/224601011-a4f50872-33ca-4f60-a06b-7f0069a1cb61.png">
 
+# Pricing
+
+If you would like to know more about pricing for PostgreSQL, please access [https://aws.amazon.com/rds/postgresql/pricing/](https://aws.amazon.com/rds/postgresql/pricing/) for details.
+
 # Clean Up
 
 Navigate to your RDS dashboard (where you can see the list of all your databases). Select the database and then click <strong>Delete</strong>.
@@ -238,6 +242,9 @@ A confirmation dialog will pop up. Just uncheck "Create final snapshot", check "
 
 <img width="388" height="388" src="6.png">
 
+# Disclaimer
+
+The entire tutorial was created to help you understand Amazon AWS. This tutorial is not intended to help you deploy any real project/product by any means. There are several other factors involved, such as security, when doing it. That said, please do not follow the same steps if you want to deploy a real application. Please talk with a specialist.
 
 <div class="alert alert-danger" role="alert">
     <i class="bi bi-exclamation-triangle me-2"></i>Don't forget to delete all databases after this lesson.

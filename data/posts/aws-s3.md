@@ -189,7 +189,7 @@ http://<YOUR_URL>/welcome.html
 
 Of course, <code>welcome.html</code> does not exist on your bucket. This is why AWS is displaying the error page.
 
-# Princing
+# Pricing
 
 If you would like to know more about pricing, please access [https://aws.amazon.com/s3/pricing](https://aws.amazon.com/s3/pricing) for details.
 
