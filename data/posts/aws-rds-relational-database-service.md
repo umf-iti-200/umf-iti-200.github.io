@@ -114,9 +114,15 @@ and <strong>uncheck</strong> this:
 
 <img width="403"src="https://user-images.githubusercontent.com/114015/224593284-9a0448d6-1c30-491b-b5e3-89a2e1efe30c.png">
 
-Finally, click on <em>Create database</em>. This process will take a long time, sometimes, it can take 5 min or more until you have the database ready for use (it will show <code>Available</code> in the <em>Status</em>).
+Finally, click on <em>Create database</em>. if the following screen pops up for you, just close it.
+
+<img width="500" src="2.png">
+
+This process will take a long time, sometimes, it can take 5 min or more until you have the database ready for use (it will show <code>Available</code> in the <em>Status</em>).
 
 <img width="612"src="https://user-images.githubusercontent.com/114015/224594216-4b9364c4-7b5d-4ed5-a9e3-878bbe23ab5d.png"></p>
+
+
 
 <div class="alert alert-warning" role="alert">
     <strong>Caveat</strong>: In this tutorial, I asked you to <strong>uncheck</strong> several options (including security options). This was intentional and only because I want you to be under the free tier and I also want you to have external access to your database. In a real/production environment, the settings will be very different.
@@ -147,10 +153,6 @@ Search for <em>Endpoint &amp; Port</em> information in <em>Connectivity &amp; Se
 This will be your hostname/IP address and the port used. Type it on your pgAdmin, in addition to the password you have created before. Click on "Save".
 
 <img width="395" alt="Screenshot 2023-03-12 at 10 36 34 PM" src="https://user-images.githubusercontent.com/114015/224595549-8b525827-8ab9-4a36-9756-acdfcae0c10b.png">
-
-if the following screen pops up for you, just close it.
-
-<img width="500" src="2.png">
 
 If everything goes well, you will be able to connect to your newly created database:
 
