@@ -60,21 +60,21 @@ Initially, you are going to use the <em>Standard create</em> option. You should 
 
 <img width="500" alt="Screenshot 2023-03-12 at 9 30 08 PM" src="https://user-images.githubusercontent.com/114015/224588306-06486b0a-6a5f-4361-9794-d91fbf34bc58.png">
 
-For the Engine option, you should select <strong>Postgres</strong> and set the engine version as default.
+For the Engine option, you should select <strong>Postgres</strong> and set the engine version as default. The image below shows PostgreSQL Engine Version 14.6-R1. However, you should select the most recent version (or just keep the engine as it is).
 
 <img width="500" alt="Screenshot 2023-03-12 at 9 30 38 PM" src="https://user-images.githubusercontent.com/114015/224588406-e0f1bef9-16cb-464d-8a3b-cac3af8e4b2b.png">
 
-<strong>Heads up!</strong> In this step, you should select <em>Free tier</em>.
+**Heads up!** In this step, you should select *Free tier*.
 
 <img width="739" alt="Screenshot 2023-03-12 at 9 32 26 PM" src="https://user-images.githubusercontent.com/114015/224588504-de093e39-57a5-4908-aac0-91ba802c359d.png">
 
 Now it is time to set the settings of your database.
 
-<ul>
-    <li><strong>DB instance identifier</strong>: type a name based on your preference</li>
-    <li><strong>Master username</strong>: you may keep it as <code>postgres</code>.</li>
-    <li><strong>Master password</strong>: you may keep it as <code>postgres</code></li>
-</ul>
+ - **DB instance identifier**: you may keep it as `database-1`
+ - **Master username**: you may keep it as `postgres`
+ - **Master password**: you may keep it as `postgres`
+
+For *Credentials management*, keep "Self managed".
 
 <img width="475" src="https://user-images.githubusercontent.com/114015/224588929-a65ca38d-a622-49a7-867b-ee9467921aa5.png">
 
@@ -88,7 +88,7 @@ For <em>Instance configuration</em>, just select the configuration under the fre
 
 Heads up! <strong>Uncheck</strong> the <em>Enable storage autoscaling</em>.
 
-<img width="500" src="https://user-images.githubusercontent.com/114015/224589608-fa3fb6ff-7ebc-4700-af06-a4dd00f5b4dd.png">
+<img width="500" src="1.png">
 
 <p>In <em>Connectivity</em>, set <code>Yes</code> for <em>Public access</em>.</p>
 
@@ -147,6 +147,10 @@ Search for <em>Endpoint &amp; Port</em> information in <em>Connectivity &amp; Se
 This will be your hostname/IP address and the port used. Type it on your pgAdmin, in addition to the password you have created before. Click on "Save".
 
 <img width="395" alt="Screenshot 2023-03-12 at 10 36 34 PM" src="https://user-images.githubusercontent.com/114015/224595549-8b525827-8ab9-4a36-9756-acdfcae0c10b.png">
+
+if the following screen pops up for you, just close it.
+
+<img width="500" src="2.png">
 
 If everything goes well, you will be able to connect to your newly created database:
 
