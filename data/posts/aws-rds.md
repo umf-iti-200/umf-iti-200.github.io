@@ -94,7 +94,7 @@ Heads up! <strong>Uncheck</strong> the <em>Enable storage autoscaling</em>.
 
 <img width="439" src="https://user-images.githubusercontent.com/114015/224592189-83ca3884-a9f3-43b0-8b62-9e3774678910.png">
 
-<p>Now select the Security Group you created at the beginning of this lesson.</p>
+<p>Now select the Security Group you created at the beginning of this tutorial.</p>
 
 <img width="424" src="https://user-images.githubusercontent.com/114015/224592553-0fd06d91-d946-415c-aff0-281258d8acaf.png">
 
@@ -247,5 +247,5 @@ A confirmation dialog will pop up. Just uncheck "Create final snapshot", check "
 The entire tutorial was created to help you understand Amazon AWS. This tutorial is not intended to help you deploy any real project/product by any means. There are several other factors involved, such as security, when doing it. That said, please do not follow the same steps if you want to deploy a real application. Please talk with a specialist.
 
 <div class="alert alert-danger" role="alert">
-    <i class="bi bi-exclamation-triangle me-2"></i>Don't forget to delete all databases after this lesson.
+    <i class="bi bi-exclamation-triangle me-2"></i>Don't forget to delete all databases after this tutorial.
 </div>
