@@ -156,7 +156,7 @@ This will be your hostname/IP address and the port used. Type it on your pgAdmin
 
 If everything goes well, you will be able to connect to your newly created database:
 
-<img width="338" alt="Screenshot 2023-03-12 at 10 38 13 PM" src="https://user-images.githubusercontent.com/114015/224595813-f8c53454-befb-48cd-8c2a-f6b9006f8086.png">
+<img width="338" height="338" src="3.png">
 
 Congratulations! Now it is time to add tables and some data to be used by your application.
 
@@ -168,7 +168,7 @@ Congratulations! Now it is time to add tables and some data to be used by your a
 
 To create a table, just right-click on the name of the database in which the table will be stored, and then click on <code>Query Tool</code>
 
-<img width="400" alt="Screenshot 2023-03-12 at 10 43 36 PM" src="https://user-images.githubusercontent.com/114015/224596384-c0e45e28-bc46-4d8d-82f2-f1ffa472c589.png">
+<img width="338" height="338" src="4.png">
 
 Create the following table:
 
@@ -194,7 +194,7 @@ As you can see, the <code>id</code> column was not provided in the INSERT comman
 
 # Connecting the Application
 
-Since we have the database working successfully, let's connect the app to the database. However, you will not do it on your workspace. By following the instructions of the previous tutorial about AWS EC2, create a new virtual computer and then clone the following repo on it:
+Since we have the database working successfully, let's connect the app to the database. However, you will not do it on your workspace. By following the instructions of the <a href="/posts/aws-ec2">previous tutorial</a> about AWS EC2, create a new virtual computer and then clone the following repo on it:
 
  - [https://github.com/umf-iti-200/amazon-rds](https://github.com/umf-iti-200/amazon-rds)
 
@@ -233,6 +233,11 @@ Congratulations! You are now running the app entirely in the cloud.
 Navigate to your RDS dashboard (where you can see the list of all your databases). Select the database and then click <strong>Delete</strong>.
 
 <img width="500" src="https://user-images.githubusercontent.com/114015/224602176-5ff3cbe0-0141-4abd-afa3-14793af1631b.png">
+
+A confirmation dialog will pop up. Just uncheck "Create final snapshot", check "I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available.", type "delete me", and, finally, click on "Delete".
+
+<img width="388" height="388" src="6.png">
+
 
 <div class="alert alert-danger" role="alert">
     <i class="bi bi-exclamation-triangle me-2"></i>Don't forget to delete all databases after this lesson.

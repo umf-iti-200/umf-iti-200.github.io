@@ -145,7 +145,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 This will download the installer. Then type the following to install Node.js:
 
 ```shell
-. ~/.nvm/nvm.sh & nvm install --lts
+. ~/.nvm/nvm.sh ; nvm install --lts
 ```
 
 This command will install the LTS (Long Term Support) version. At the time of this tutorial being written, the LTS version is 20.
