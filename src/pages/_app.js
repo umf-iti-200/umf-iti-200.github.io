@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps }) {
     useEffect(() => {
         import("bootstrap/dist/js/bootstrap");
 
-        hljs.highlightAll();
+        hljs.initHighlighting();
     }, []);
 
     return <Component {...pageProps} />;
