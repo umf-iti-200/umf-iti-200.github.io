@@ -14,7 +14,7 @@ tags:
 
 This tutorial was created to help you understand the basics of Amazon AWS. It is not intended to help you deploy any real project/product by any means. There are several other factors involved, such as security, when doing it. That said, please do not follow the same steps if you want to deploy a real application. Please talk with a specialist.
 
-If you did not create yet an AWS account, please follow <a href="/posts/create-a-new-aws-account">this tutorial</a>. If you already have an account, just log into Console. I also recommend you follow the <a href="/posts/aws-ec2">previous tutorial</a> about AWS EC2.
+If you did not create yet an AWS account, please follow [this tutorial](/posts/create-a-new-aws-account). If you already have an account, just log into Console.
 
 # Create a VPC
 

@@ -58,7 +58,7 @@ export default function Posts({ post, recentPosts }) {
                 if (!(href.startsWith("http://") || href.startsWith("https://"))) {
 
                     if (children.length === 1 && children[0].type === "text") {
-                        return <Link href={href}> {children[0].data} </Link>;
+                        return <Link href={href}>{children[0].data}</Link>;
                     }
                 }
             }
