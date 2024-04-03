@@ -12,6 +12,8 @@ tags:
 
 # Before You Begin
 
+This tutorial was created to help you understand the basics of Amazon AWS. It is not intended to help you deploy any real project/product by any means. There are several other factors involved, such as security, when doing it. That said, please do not follow the same steps if you want to deploy a real application. Please talk with a specialist.
+
 If you did not create yet an AWS account, please follow <a href="/posts/create-a-new-aws-account">this tutorial</a>. If you already have an account, just log into Console. I also recommend you follow the <a href="/posts/aws-ec2">previous tutorial</a> about AWS EC2.
 
 # Create a VPC
@@ -241,10 +243,6 @@ Navigate to your RDS dashboard (where you can see the list of all your databases
 A confirmation dialog will pop up. Just uncheck "Create final snapshot", check "I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available.", type "delete me", and, finally, click on "Delete".
 
 <img width="388" height="388" src="6.png">
-
-# Disclaimer
-
-The entire tutorial was created to help you understand Amazon AWS. This tutorial is not intended to help you deploy any real project/product by any means. There are several other factors involved, such as security, when doing it. That said, please do not follow the same steps if you want to deploy a real application. Please talk with a specialist.
 
 <div class="alert alert-danger" role="alert">
     <i class="bi bi-exclamation-triangle me-2"></i>Don't forget to delete all databases after this tutorial.
