@@ -2,13 +2,14 @@ import matter from "gray-matter";
 import showdown from "showdown";
 import readingTime from "reading-time";
 import showdownHighlight from "showdown-highlight";
-
 import PathUtils from "../utils/PathUtils";
 import DateUtils from "../utils/DateUtils";
 
 const converter = new showdown.Converter({
     ghCompatibleHeaderId: true,
-    extensions: [showdownHighlight]
+    extensions: [
+        showdownHighlight
+    ]
 });
 
 export function findByFileName(fullPath) {

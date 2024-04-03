@@ -10,53 +10,57 @@ tags:
   - rds
 ---
 
+# Introduction
+
+Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the AWS Cloud.
+
 # Before You Begin
 
 This tutorial was created to help you understand the basics of Amazon AWS. It is not intended to help you deploy any real project/product by any means. There are several other factors involved, such as security, when doing it. That said, please do not follow the same steps if you want to deploy a real application. Please talk with a specialist.
 
 If you did not create yet an AWS account, please follow [this tutorial](/posts/create-a-new-aws-account). If you already have an account, just log into Console.
 
-# Create a VPC
+# Create a Security Group
 
-Amazon Virtual Private Cloud (VPC) is a service that lets you launch AWS resources in a logically isolated virtual network that you define. On your Console Home, look for <code>Services</code> on the top navbar and then go to <code>Database → VPC</code>.
+Amazon Virtual Private Cloud (VPC) is a service that lets you launch AWS resources in a logically isolated virtual network that you define. On your Console Home, look for `Services` on the top navbar and then go to `Database → VPC`.
 
-<img width="500" alt="Screenshot 2023-03-12 at 9 48 04 PM" src="https://user-images.githubusercontent.com/114015/224590065-c127ee93-46e7-4e68-bd8f-e955bc3284e1.png">
+<img width="500" src="https://user-images.githubusercontent.com/114015/224590065-c127ee93-46e7-4e68-bd8f-e955bc3284e1.png">
 
-On the left sidebar, search for <em>Security Groups</em> and click on it:
+On the left sidebar, search for *Security Groups* and click on it:
 
-<img width="317" alt="Screenshot 2023-03-12 at 9 49 14 PM" src="https://user-images.githubusercontent.com/114015/224590189-99d3b466-f7a5-4db1-b6b6-7b0e5e7bf3b7.png">
+<img width="317" src="https://user-images.githubusercontent.com/114015/224590189-99d3b466-f7a5-4db1-b6b6-7b0e5e7bf3b7.png">
 
-On the right side, search for <em>Create security group</em>
+On the right side, search for *Create security group*
 
-<img width="416" alt="Screenshot 2023-03-12 at 9 50 47 PM" src="https://user-images.githubusercontent.com/114015/224590344-2ea4123d-7446-4970-a74f-30794d72fc29.png">
+<img width="416" src="https://user-images.githubusercontent.com/114015/224590344-2ea4123d-7446-4970-a74f-30794d72fc29.png">
 
-For <em>Security group name</em>, just type a name based on your preferences. For <em>Description</em>, type something related to this security group.
+For the *Security group name*, just type a name based on your preferences. For now, let's just  For *Description*, type something related to this security group.
 
-<img width="500" alt="Screenshot 2023-03-12 at 10 07 03 PM" src="https://user-images.githubusercontent.com/114015/224591949-cc736164-9e04-420b-9a8d-492b4cbab427.png">
+<img width="500" src="https://user-images.githubusercontent.com/114015/224591949-cc736164-9e04-420b-9a8d-492b4cbab427.png">
 
-Then click on <em>Add rule</em> under **Inbound Rules** and add the following rules.
+Then click on *Add rule* under **Inbound Rules** and add the following rules.
 
-<img width="500" alt="Screenshot 2023-03-12 at 9 53 57 PM" src="https://user-images.githubusercontent.com/114015/224590692-d848c8bf-35fe-44bd-8951-1c16ee5f5f20.png">
+<img width="500" src="https://user-images.githubusercontent.com/114015/224590692-d848c8bf-35fe-44bd-8951-1c16ee5f5f20.png">
 
-In <em>Source</em>, select <code>Anywhere-IPv4</code> for the first and <code>Anywhere-IPv6</code> for the second rule. Finally, click on <em>Create Security Group</em>. We have created this security group because we want to have access to the database using pgAdmin, besides several other reasons. In a production/real environment, you should perform different steps. Now you can create a Postgres database.
+In *Source*, select `Anywhere-IPv4` for the first and `Anywhere-IPv6` for the second rule. Finally, click on *Create Security Group*. We have created this security group because we want to have access to the database using [pgAdmin](https://www.pgadmin.org), besides several other reasons. In a production/real environment, you should perform very different steps. Now you can create a Postgres database.
 
 # Create an RDS Database
 
-On your Console Home, look for <code>Services</code> on the top navbar and then go to <code>Database → RDS</code>.
+On your Console Home, look for `Services` on the top navbar and then go to `Database → RDS`.
 
-<img width="500" alt="Screenshot 2023-03-12 at 9 21 55 PM" src="https://user-images.githubusercontent.com/114015/224587636-2fb3a5af-efba-4c7c-a33a-07c03230f728.png">
+<img width="500" src="https://user-images.githubusercontent.com/114015/224587636-2fb3a5af-efba-4c7c-a33a-07c03230f728.png">
 
-Amazon Relational Database Service (Amazon RDS) is a collection of managed services that makes it simple to set up, operate, and scale databases in the cloud. When you access RDS, the image below shows its homepage.
+When you access RDS, the image below shows its homepage.
 
-<img width="500" alt="Screenshot 2023-03-12 at 9 24 32 PM" src="https://user-images.githubusercontent.com/114015/224587844-1888ebf3-67c5-47ee-ab8e-b1028a4fc962.png">
+<img width="500" src="https://user-images.githubusercontent.com/114015/224587844-1888ebf3-67c5-47ee-ab8e-b1028a4fc962.png">
 
 As you can see, no database exists.
 
 # Creating the First Database
 
-On the homepage, click on <em>Create database</em>. You are going to pass through several steps until the end. Please pay attention all the details.
+On the homepage, click on *Create database*. You are going to pass through several steps until the end. Please pay attention to all the details.
 
-<img width="411" alt="Screenshot 2023-03-12 at 9 26 46 PM" src="https://user-images.githubusercontent.com/114015/224588057-02a883a3-7c3c-4506-8c10-45442427b6c0.png">
+<img width="411" src="https://user-images.githubusercontent.com/114015/224588057-02a883a3-7c3c-4506-8c10-45442427b6c0.png">
 
 Initially, you are going to use the <em>Standard create</em> option. You should select this option because you want to be under the free tier.
 
@@ -247,3 +251,7 @@ A confirmation dialog will pop up. Just uncheck "Create final snapshot", check "
 <div class="alert alert-danger" role="alert">
     <i class="bi bi-exclamation-triangle me-2"></i>Don't forget to delete all databases after this tutorial.
 </div>
+
+# References
+
+  1. [What is Amazon Relational Database Service (Amazon RDS)?](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
