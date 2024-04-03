@@ -50,7 +50,7 @@ export async function getStaticProps({ params }) {
     const posts = getPosts();
 
     const pageNumber = parseInt(params.pageNumber);
-    const pageSize = Settings.pageSize;
+    const pageSize = Settings.page_size;
     const maxPages = Math.ceil(posts.length / pageSize);
 
     const filtered = ArrayUtils.paginate(posts, pageNumber, pageSize);
