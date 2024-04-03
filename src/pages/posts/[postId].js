@@ -66,7 +66,7 @@ export default function Posts({ post, recentPosts }) {
     });
 
     const tocAsHTML = toc.map((item, i) =>
-        <li><a href={`#${item.id}`}>{item.title}</a></li>
+        <li key={i}><a href={`#${item.id}`}>{item.title}</a></li>
     );
 
     return (
