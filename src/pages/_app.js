@@ -2,8 +2,6 @@ import { useEffect } from "react";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-
-import hljs from "highlight.js";
 import "highlight.js/styles/github.css";
 
 import "../../public/css/style.scss";
@@ -13,8 +11,6 @@ export default function MyApp({ Component, pageProps }) {
 
     useEffect(() => {
         import("bootstrap/dist/js/bootstrap");
-
-        hljs.initHighlighting();
     }, []);
 
     return <Component {...pageProps} />;
