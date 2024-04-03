@@ -74,7 +74,7 @@ export default function Posts({ post, recentPosts }) {
 
             <Breadcrumb>
                 <Breadcrumb.Item href="/posts">Posts</Breadcrumb.Item>
-                <Breadcrumb.Item>{post.title}</Breadcrumb.Item>
+                <Breadcrumb.Item>{post.category}</Breadcrumb.Item>
             </Breadcrumb>
 
             <h1 className="title">{post.title}</h1>
