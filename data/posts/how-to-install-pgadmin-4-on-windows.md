@@ -8,7 +8,7 @@ tags:
   - how-to
 ---
 
-# Installing
+# Downloading
 
 Access the [download page](https://www.pgadmin.org/download/) and select "Windows".
 
@@ -23,6 +23,9 @@ Click on the `.exe` file to download it.
 <img  width="400" src="3.png">
 
 If everything goes well, you should have the installer located in the "Downloads" folder on your Windows. Just double-click on it to initiate the installation process.
+
+
+# Installing
 
 <img width="400" src="4.png">
 
@@ -57,6 +60,8 @@ Please wait for the installation process to be done.
 Done. You have successfully installed pgAdmin 4 on your computer. It is time to launch it.
 
 <img width="400" src="12.png">
+
+# Opening
 
 Open the menu on your Windows and search for "pgAdmin". Click to open it.
 
