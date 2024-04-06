@@ -25,7 +25,7 @@ If everything goes well, you should be able to see on VS Code the entire folder
 
 Go back to the menu bar, search for "View" and then click on "Terminal".
 
-![](unnamed-3.png =300x300)
+![](unnamed-3.png =200x200)
 
 This will open a built-in terminal on VS Code. The good thing is that the terminal is opened in the project folder. That is, you don't need to navigate to that folder. You are ready to launch your project.
 
