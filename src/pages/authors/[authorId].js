@@ -2,7 +2,7 @@ import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
 import PostList from "../../components/PostList";
 
-import { getAuthors, findById } from "../../api/Authors";
+import { findAll, findBySlug } from "../../services/Authors";
 import { getRecentPostsByAuthorId } from "../../api/Posts";
 
 export default function AuthorId({ author, recentPosts }) {
@@ -17,6 +17,9 @@ export default function AuthorId({ author, recentPosts }) {
 
             <h1 className="title pb-3 border-bottom">{author.name}</h1>
 
+            <h1>Title</h1>
+            <p>{author.title}</p>
+
             <h1>Bio</h1>
             <p>{author.bio}</p>
 
@@ -30,11 +33,11 @@ export default function AuthorId({ author, recentPosts }) {
 
 export async function getStaticPaths() {
 
-    const authors = getAuthors();
+    const authors = await findAll();
 
     const paths = authors.map((author) => ({
         params: {
-            authorId: author.id,
+            authorId: author.slug,
         },
     }));
 
@@ -45,7 +48,7 @@ export async function getStaticProps({ params }) {
 
     return {
         props: {
-            author: findById(params.authorId),
+            author: await findBySlug(params.authorId),
             recentPosts: getRecentPostsByAuthorId(params.authorId)
         }
     };

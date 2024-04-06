@@ -4,14 +4,16 @@ import Table from "react-bootstrap/Table";
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
 
-import { getAuthors } from "../../api/Authors";
+import { findAll } from "../../services/Authors";
 
 export default function IndexPage({ authors }) {
+
+
 
     const authorsAsHTML = authors.map((author, i) =>
         <tr key={i}>
             <td>
-                <Link href={`authors/${author.id}`}>{author.name}</Link>
+                <Link href={`authors/${author.slug}`}>{author.name}</Link>
             </td>
             <td>
                 {author.title}
@@ -47,7 +49,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            authors: getAuthors()
+            authors: await findAll()
         }
     };
 }
