@@ -25,10 +25,6 @@ brew install nginx
 
 The default port will be set to `8080`. Also, you don't need to type `sudo` to run it.
 
-# Configuring
-
-Nginx uses configuration files to run. For this installation, nginx will load all files in `/opt/homebrew/etc/nginx/servers/`.
-
 # Running
 
 ```shell
@@ -42,3 +38,29 @@ Type the following command to stop nginx on your computer
 ```shell
 brew services stop nginx
 ```
+
+# Configuring
+
+Nginx uses configuration files to run. For this installation, nginx will load all files in `/opt/homebrew/etc/nginx/servers/`.
+
+If you would like to use Nginx as a load balancer, use the following configuration
+
+```nginx
+upstream my_http_servers {
+    server 127.0.0.1:3000;      # server1 listens to port 3000
+    server 127.0.0.1:3001;      # server2 listens to port 3001
+    server 127.0.0.1:3002;      # server3 listens to port 3002
+}
+
+server {
+    listen 80;
+    server_name localhost;
+    location / {
+        proxy_set_header   X-Real-IP $remote_addr;
+        proxy_set_header   Host      $http_host;
+        proxy_pass         http://my_http_servers;
+    }
+}
+```
+
+
