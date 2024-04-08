@@ -43,7 +43,9 @@ brew services stop nginx
 
 Nginx uses configuration files to run. For this installation, nginx will load all files in `/opt/homebrew/etc/nginx/servers/`.
 
-If you would like to use Nginx as a load balancer, create a new file at `/opt/homebrew/etc/nginx/servers/`. For instance, create a mysite.com
+If you would like to use Nginx as a load balancer, create a new file at `/opt/homebrew/etc/nginx/servers/`. For instance, create a `mysite.com` file as the image below
+
+![](1.png)
 
 The content should be:
 
