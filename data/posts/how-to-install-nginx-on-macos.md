@@ -25,6 +25,10 @@ brew install nginx
 
 The default port will be set to `8080`. Also, you don't need to type `sudo` to run it.
 
+Just press "allow" if the following screen pops up.
+
+![](1.png =300x300)
+
 # Running
 
 ```shell
@@ -45,7 +49,7 @@ Nginx uses configuration files to run. For this installation, nginx will load al
 
 If you would like to use Nginx as a load balancer, create a new file at `/opt/homebrew/etc/nginx/servers/`. For instance, create a `mysite.com` file as the image below
 
-![](1.png)
+![](2.png =300x300)
 
 The content should be:
 
