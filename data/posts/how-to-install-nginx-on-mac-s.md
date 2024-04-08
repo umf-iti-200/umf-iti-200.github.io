@@ -60,7 +60,8 @@ upstream my_http_servers {
 
 server {
     listen 80;
-    server_name localhost;
+    server_name example.com www.example.com;
+
     location / {
         proxy_set_header   X-Real-IP $remote_addr;
         proxy_set_header   Host      $http_host;
