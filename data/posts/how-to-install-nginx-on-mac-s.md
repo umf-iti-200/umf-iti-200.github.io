@@ -43,28 +43,22 @@ brew services stop nginx
 
 Nginx uses configuration files to run. For this installation, nginx will load all files in `/opt/homebrew/etc/nginx/servers/`.
 
-If you would like to use Nginx as a load balancer, then open Nano to edit the `nginx.conf` file
+If you would like to use Nginx as a load balancer, create a new file at `/opt/homebrew/etc/nginx/servers/`. For instance, create a mysite.com
 
-```shell
-nano /opt/homebrew/etc/nginx/nginx.conf
-```
-
-Delete all current settings and paste the following configuration:
+The content should be:
 
 ```nginx
 upstream my_http_servers {
-    server 127.0.0.1:3000;      # server1 listens to port 3000
-    server 127.0.0.1:3001;      # server2 listens to port 3001
-    server 127.0.0.1:3002;      # server3 listens to port 3002
+    server localhost:3000;      # server1 listens to port 3000
+    server localhost:3001;      # server2 listens to port 3001
+    server localhost:3002;      # server3 listens to port 3002
 }
 
 server {
     listen 80;
-    server_name example.com www.example.com;
+    server_name mysite.com www.mysite.com;
 
     location / {
-        proxy_set_header   X-Real-IP $remote_addr;
-        proxy_set_header   Host      $http_host;
         proxy_pass         http://my_http_servers;
     }
 }
