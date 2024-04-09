@@ -1,5 +1,5 @@
 ---
-title: How to Install Visual Studio Code
+title: How to Install Visual Studio Code on MacOS
 authorName: Thiago Ferreira
 authorId: thiago-ferreira
 publishedAt: March 28, 2024 9:12 AM
@@ -13,11 +13,9 @@ tags:
 
 Visual Studio Code (or simply VS Code) is a tool used primarily by programmers to develop software systems. This tool is free, open source, and can be installed in popular Operating Systems such as Windows, Linux, and MacOS. If you would like to know more about it, please access [their website](https://code.visualstudio.com).
 
-In this tutorial, you will learn how to install it on your computer. Please read the section related to the operating system you are using.
+# Downloading
 
-## Installing On MacOS
-
-Access [https://code.visualstudio.com](https://code.visualstudio.com), click on the blue arrow facing down and then select the "stable" version.
+Access [https://code.visualstudio.com/Download](https://code.visualstudio.com/Download). Select the version suitable for your machine (either Apple Silicon or Intel).
 
 <img width="400" height="400" src="mac-1.png">
 
