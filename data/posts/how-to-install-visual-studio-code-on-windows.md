@@ -5,8 +5,8 @@ authorId: thiago-ferreira
 publishedAt: April 9, 2024 9:12 AM
 category: Tutorial
 tags:
-  - vscode
-  - how-to
+  - vs-code
+  - install
   - windows
 ---
 

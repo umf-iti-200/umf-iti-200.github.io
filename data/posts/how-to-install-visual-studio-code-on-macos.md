@@ -5,8 +5,9 @@ authorId: thiago-ferreira
 publishedAt: March 28, 2024 9:12 AM
 category: Tutorial
 tags:
-  - vscode
-  - how-to
+  - vs-code
+  - install
+  - macos
 ---
 
 # Introduction
