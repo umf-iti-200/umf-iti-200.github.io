@@ -32,7 +32,7 @@ export async function getStaticPaths() {
 
     const posts = getPosts();
 
-    const maxPages = Math.ceil(posts.length / Settings.pageSize);
+    const maxPages = Math.ceil(posts.length / Settings.page_size);
 
     const pageNumbers = Array.from({ length: maxPages }, (_, i) => i + 1);
 
