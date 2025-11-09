@@ -76,7 +76,7 @@ Save the file, stop and start again Nginx.
 
 ## Round Robin
 
-```
+```nginx
 upstream my_http_servers {
     server 192.168.64.3:3000;      # server1 listens to port 3000
     server 192.168.64.3:3001;      # server2 listens to port 3001
@@ -86,7 +86,7 @@ upstream my_http_servers {
 
 ## Least Connection
 
-```
+```nginx
 upstream my_http_servers {
     least_conn;
     server 192.168.64.3:3000;      # server1 listens to port 3000
@@ -97,7 +97,7 @@ upstream my_http_servers {
 
 ## IP Hash
 
-```
+```nginx
 upstream my_http_servers {
     ip_hash;
     server 192.168.64.3:3000;      # server1 listens to port 3000
